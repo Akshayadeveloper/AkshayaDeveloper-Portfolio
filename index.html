@@ -3,527 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshaya Selvakumar Portfolio</title>
-    <!-- Tailwind CSS CDN for utility-first styling -->
+    
+    <!-- PRIMARY SEO & SEARCH VISIBILITY -->
+    <title>Akshaya Selvakumar | CEO & Strategic Founder | Global Bridge & Voryx</title>
+    <meta name="description" content="Official portfolio of Akshaya Selvakumar: Computer Science Gold Medalist, Solo Founder & CEO of Global Bridge, Finite Logic SAAS Pro, and VORYX. Managing confidential $100M+ projects with 730+ global C-level connections.">
+    <meta name="keywords" content="Akshaya Selvakumar, CEO Global Bridge, Voryx Founder, Finite Logic SAAS, Tech Executive, $100M Project Manager, Computer Science Gold Medalist, Strategic Partnerships, SaaS Founder">
+    <meta name="author" content="Akshaya Selvakumar">
+    <link rel="canonical" href="https://akshayaselvakumar.com">
+
+    <!-- OPEN GRAPH (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Akshaya Selvakumar | Global CEO & Tech Visionary">
+    <meta property="og:description" content="Overseeing $100M+ confidential projects and a global network of 730+ C-level executives. Solo Founder of Global Bridge, Finite Logic, and Voryx.">
+    <meta property="og:image" content="Profile1.png">
+    <meta property="og:url" content="https://akshayaselvakumar.com">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akshaya Selvakumar | CEO Portfolio">
+    <meta name="twitter:description" content="Strategic leader in Tech and Global Trade. Founder of Finite Logic SAAS Pro and Global Bridge.">
+
+    <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Inter (main) and DM Mono (accent/tech) -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <style>
-        /* Base styles for body, ensuring smooth scrolling and font application */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Fallback for gradient */
-            color: #e5e7eb; /* Light gray text */
+            background-color: #050505;
+            color: #f1f1f1;
             scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .font-dm-mono { font-family: 'DM Mono', monospace; }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, rgba(5, 5, 5, 1) 70%);
         }
 
-        /* Custom font application for DM Mono */
-        .font-dm-mono {
-            font-family: 'DM Mono', monospace;
-        }
-
-        /* Nothing Phone inspired glyph animation styles */
-        .glyph-container {
-            display: flex;
-            gap: 6px; /* Spacing between glyph bars */
-            margin-top: 20px;
-        }
-
+        /* Responsive Glyph */
+        .glyph-container { display: flex; gap: 6px; }
         .glyph-bar {
-            width: 30px; /* Width of each bar */
-            height: 5px; /* Height of each bar */
-            background-color: #9ca3af; /* Muted gray for glyphs */
-            border-radius: 2px; /* Slightly rounded bars */
-            animation: glyph-pulse 2s infinite ease-in-out;
+            width: 30px; height: 4px;
+            background-color: #334155;
+            border-radius: 99px;
+            animation: glyph-pulse 2.5s infinite ease-in-out;
         }
-
-        /* Staggered animation for each glyph bar */
-        .glyph-bar:nth-child(1) { animation-delay: 0s; }
-        .glyph-bar:nth-child(2) { animation-delay: 0.2s; }
-        .glyph-bar:nth-child(3) { animation-delay: 0.4s; }
-        .glyph-bar:nth-child(4) { animation-delay: 0.6s; }
-
+        .glyph-bar:nth-child(odd) { animation-delay: 0.5s; }
         @keyframes glyph-pulse {
-            0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
-            50% { opacity: 1; transform: scaleY(1); }
+            0%, 100% { opacity: 0.2; transform: scaleX(0.8); }
+            50% { opacity: 1; transform: scaleX(1.1); background-color: #38bdf8; }
         }
 
-        /* Modal styles for smooth transitions */
-        .modal {
-            transition: opacity 0.25s ease, visibility 0.25s ease;
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .modal-content {
-            transition: transform 0.25s ease;
-        }
-        .modal.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal.open .modal-content {
-            transform: scale(1) translateY(0);
+        .glass-panel:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-4px);
         }
 
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* Dark gray track */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4b5563; /* Medium gray thumb */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* Lighter gray on hover */
-        }
+        .text-glow { text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
 
-        /* Ensure full viewport height for hero on mobile, adjusting for header */
-        @media (max-width: 768px) {
-            .hero-section {
-                min-height: calc(100vh - 4rem); /* Adjust based on header height */
-            }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.75rem !important; }
         }
     </style>
+    
     <script>
-        // Tailwind CSS configuration for custom font families and colors
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        'dm-mono': ['DM Mono', 'monospace'],
-                        'inter': ['Inter', 'sans-serif'],
-                    },
                     colors: {
-                        'brand-accent': '#00ffff', // Example accent color (cyan)
+                        brand: {
+                            cyan: '#38bdf8',
+                            dark: '#050505',
+                            slate: '#94a3b8'
+                        }
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-neutral-900 via-slate-900 to-black min-h-screen">
+<body class="antialiased">
 
-    <!-- Header Section: Sticky navigation bar -->
-    <header class="sticky top-0 z-50 bg-neutral-900/80 backdrop-blur-md shadow-lg">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-dm-mono font-bold text-white">AKSHAYA.CEO</a>
-        <nav class="space-x-6">
-            <a href="#hero" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">Home</a>
-            <a href="#portfolio" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">Portfolio</a>
-            <a href="#voryx-shop" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">VORYX Shop</a>
-            <a href="#talents" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">Talents</a>
-            <a href="#about" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">About</a>
-            <a href="#contact" class="text-neutral-300 hover:text-white transition-colors duration-300 font-dm-mono text-sm">Contact</a>
+    <!-- NAVIGATION -->
+    <header class="fixed top-0 w-full z-[100] border-b border-white/5 bg-brand-dark/80 backdrop-blur-lg">
+        <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="text-xl font-dm-mono font-bold tracking-tighter hover:text-brand-cyan transition-colors">AKSHAYA<span class="text-brand-cyan">.CEO</span></a>
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-dm-mono text-brand-slate">
+                <a href="#ventures" class="hover:text-white transition-colors">Ventures</a>
+                <a href="#network" class="hover:text-white transition-colors">Network</a>
+                <a href="#talents" class="hover:text-white transition-colors">Talents</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="https://www.linkedin.com/in/akshaya-selvakumar-5b3461278" target="_blank" class="px-5 py-2 border border-brand-cyan/20 text-brand-cyan text-[10px] font-dm-mono uppercase rounded-full hover:bg-brand-cyan/10 transition-all">
+                LinkedIn
+            </a>
         </nav>
-    </div>
-</header>
-    
-    <!-- Hero Section: Main introduction with dynamic background and glyph animation -->
-    <section id="hero" class="hero-section min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 bg-cover bg-center" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.9)), url('https://placehold.co/1920x1080/222/666?text=Impactful+Background');">
-        <h1 class="text-5xl md:text-7xl font-dm-mono font-bold text-white mb-4 leading-tight">
-            CRAFTING <span class="text-slate-400">DIGITAL</span> EXCELLENCE
-        </h1>
-        <p class="text-lg md:text-xl text-neutral-300 max-w-2xl mb-8">
-            Blending technical mastery with creative vision to build impactful solutions and art.
-        </p>
-        <!-- Nothing Phone inspired glyph animation -->
-        <div class="glyph-container">
-            <div class="glyph-bar"></div>
-            <div class="glyph-bar"></div>
-            <div class="glyph-bar"></div>
-            <div class="glyph-bar"></div>
-        </div>
-        <a href="#portfolio" class="mt-12 px-8 py-3 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-lg rounded-lg transition-colors duration-300 shadow-md">
-            View My Work
-        </a>
-    </section>
+    </header>
 
-    <!-- Portfolio Section: Showcasing diverse skills -->
-    <section id="portfolio" class="py-16 md:py-24">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-dm-mono font-bold text-center mb-12 text-white">My Portfolio</h2>
-
-            <!-- Computer Science & Open-Source Development Section -->
-            <div class="bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50 mb-16">
-                <h3 class="text-3xl font-dm-mono font-bold mb-6 text-white text-center md:text-left">Code that Solves Problems: Engineering Digital Solutions</h3>
-                <p class="text-neutral-300 mb-4 leading-relaxed">
-                    As a <strong class="text-white">gold medalist in Master of Science in Computer Science</strong>, I am driven by a profound passion for building elegant, efficient, and impactful software. My work in computer science is dedicated to transforming complex challenges into seamless digital experiences. I believe in the power of well-crafted code to innovate and streamline, creating solutions that are not only functional but also intuitive and scalable.
-                </p>
-                <p class="text-neutral-300 mb-6 leading-relaxed">
-                    My commitment to collaborative innovation is evident in my extensive contributions to the open-source community. You can find my work on GitHub, where I maintain <strong class="text-white">over 55 open-source repositories</strong> and engage with a thriving community of <strong class="text-white">210+ followers</strong>. This platform serves as a testament to my dedication to shared knowledge and continuous improvement in the developer ecosystem.
-                </p>
-                <div class="text-center md:text-left">
-                    <a href="https://github.com/Akshayadeveloper" target="_blank" class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-md rounded-lg transition-colors duration-300 shadow-md inline-block">
-                        View My GitHub Profile
-                    </a>
+    <!-- HERO SECTION -->
+    <main id="hero" class="relative hero-gradient pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex justify-center mb-8">
+                <div class="glyph-container">
+                    <div class="glyph-bar"></div><div class="glyph-bar"></div><div class="glyph-bar"></div><div class="glyph-bar"></div>
                 </div>
             </div>
-
-            <!-- Digital Art & Design Section -->
-            <div class="bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50 mb-16">
-                <h3 class="text-3xl font-dm-mono font-bold mb-6 text-white text-center md:text-left">Where Creativity Meets the Canvas: Art from the Imagination</h3>
-                <p class="text-neutral-300 mb-4 leading-relaxed">
-                    Beyond the realm of code, my creativity finds expression in the vibrant world of digital art and design. I am deeply passionate about digital painting, where I translate imagination into captivating visuals. My artistic journey is shared with a growing community on ArtStreet Medibang, where I've garnered a following of <strong class="text-white">over 100 art enthusiasts</strong>.
-                </p>
-                <p class="text-neutral-300 mb-6 leading-relaxed">
-                    My design skills extend to creating unique and personalized products. I specialize in crafting original designs for various Print-on-Demand platforms, producing bespoke <strong class="text-white">stickers, mugs, clothing, and home decor</strong>. Each piece is designed to bring a touch of artistic flair to everyday life.
-                </p>
-                <div class="text-center md:text-left">
-                    <a href="https://medibang.com/u/Sukuna" target="_blank" class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-md rounded-lg transition-colors duration-300 shadow-md inline-block">
-                        Explore My Digital Art Gallery
-                    </a>
-                </div>
-            </div>
-
-            <!-- Nature & Landscape Photography Section -->
-            <div class="bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50 mb-16">
-                <h3 class="text-3xl font-dm-mono font-bold mb-6 text-white text-center md:text-left">Capturing the Soul of Nature: The World Through My Lens</h3>
-                <p class="text-neutral-300 mb-4 leading-relaxed">
-                    My lens is a window to the serene and powerful moments hidden within the natural world. Photography is a profound passion, allowing me to capture the fleeting beauty of landscapes and the intricate details of nature. My curated collection features <strong class="text-white">over 100 high-resolution nature photographs</strong>, each telling a unique story of the earth's grandeur.
-                </p>
-                <p class="text-neutral-300 mb-6 leading-relaxed">
-                    These stunning photographs are available for purchase, offering both high-quality digital downloads and exquisite prints. Whether you're looking to adorn your personal space, enhance your web projects, or acquire images for commercial licensing, my collection provides versatile options to meet your needs.
-                </p>
-                <div class="text-center md:text-left">
-                    <a href="https://akshayadeveloper.github.io/Photo-selling/index.html" target="_blank" class="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-md rounded-lg transition-colors duration-300 shadow-md inline-block">
-                        Browse My Online Photo Store
-                    </a>
-                </div>
-            </div>
-
-            <h3 class="text-3xl font-dm-mono font-bold text-center mb-8 text-white">Visual Showcase</h3>
-            <p class="text-center text-neutral-400 mb-10 max-w-2xl mx-auto">
-                A glimpse into the visual aspects of my work, spanning various creative and technical projects. Click on any image to view it in detail.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0008.jpg" alt="Code related visual" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Project</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0011.jpg" alt="Digital Art piece" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Art</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0005.jpg" alt="Nature Photography" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Photo</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0006.jpg" alt="User Interface Design" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Design</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0009.jpg" alt="Abstract Digital Art" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Art</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3">
-                    <img src="IMG-20250921-WA0000.jpg" alt="Wildlife Photography" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <p class="text-white text-lg font-dm-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Photo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ignite Shop Section: Print-on-Demand Brand -->
-    <section id="voryx-shop" class="py-16 md:py-24 bg-neutral-800/30">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50">
-                <h2 class="text-4xl font-dm-mono font-bold mb-8 text-white">Ignite Your Style: My Print-on-Demand Shop</h2>
-                <p class="text-neutral-300 mb-6 leading-relaxed">
-                    Welcome to <strong class="text-white">VORYX</strong>, my exclusive print-on-demand brand where creativity meets wearable art and unique home decor. Here, you'll find a diverse collection of original designs, ranging from thought-provoking graphics to intricate patterns, all crafted with passion and attention to detail.
-                </p>
-                <p class="text-neutral-300 mb-8 leading-relaxed">
-                    Every item is produced with high-quality materials, ensuring comfort, durability, and vibrant prints. Explore my designs on various platforms, each offering a unique selection of products including t-shirts, hoodies, mugs, phone cases, and more.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                    <div class="flex flex-col items-center">
-                        <img src="https://imgproxy.fourthwall.com/rFzqW_aAGZGzckpQmIPJCJRffkwk6W2M6TRy8tfOUyE/w:1920/sm:1/enc/9qtIrtjrIbmo49f4/tU6C_OJ1vBoJgjKF/7hRXOFbxw0s8zuu3/Lo0J_-dWFOhI-JNN/iPvgWmg7fSPR6gjS/P_ktFGSf_W7qrpFs/TpZ4HiwrOzxh1qcr/ot6SR51p_QTqE9KV/YI3pEncfzdlu46yv/uFwOmMB9tbA67t9f/FnazYShTVtNc24mR/RbWAstMvHWUOewAh/j8SAB5SP-NdtqlTo/--MSbA" alt="Teespring Logo/Product" class="w-40 h-40 rounded-lg mb-4 object-cover shadow-lg border border-neutral-700">
-                        <h4 class="text-xl font-dm-mono font-semibold text-white mb-2">Teespring</h4>
-                        <a href="https://westylish.creator-spring.com" target="_blank" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-sm rounded-lg transition-colors duration-300 shadow-md">
-                            Limited Edition 
-                        </a>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="https://imgproxy.fourthwall.com/m9ysMQiXcrnPF2cRgBnjJkZAb6HwXh87vyq1DGaRcow/w:1920/sm:1/enc/LXsaQ_DjSs_OvGG_/M_BaiIe0-vmsuIjc/wF7vZ5k5iW53XF2B/tbY1DCIDPb8e9NKm/vPmUEytQOzd0ohxp/cfdV-Y6KXM6750Uo/C5vB8La5mzLORo_f/QyNgMwwM4pONlIyj/LzO4KRt4VsrTrhfi/B7KEg45yHyZDbmwV/tm60doo27vXIvG2C/kZPeOYkZbpxI_k2Y/8YRqZSajPXZtPY6b/o5D-pA" alt="TeePublic Logo/Product" class="w-40 h-40 rounded-lg mb-4 object-cover shadow-lg border border-neutral-700">
-                        <h4 class="text-xl font-dm-mono font-semibold text-white mb-2">TeePublic</h4>
-                        <a href="YOUR_TEEPUBLIC_LINK_HERE" target="_blank" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-sm rounded-lg transition-colors duration-300 shadow-md">
-                            Shop TeePublic
-                        </a>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="https://imgproxy.fourthwall.com/BpnQ4Srb46Pm3VK02t1l550cnkZyGGuIyq80ge4OIAk/w:1920/sm:1/enc/yPnwrldphbNKG9yE/1A0XHIM_t3Wo1W_a/AdPxzZnCuSHFf_oB/gOThJCZbzmXj7Oll/xYRaoty_gd_lds-v/CIcIMuiI_OvC92pd/-ks__CLViQspG2Xf/4XnsVkSVkGCAaONu/lPIPDdrERx5LWx7D/mnfnRKPUh24nxR9g/bOjuXWni9e4yN09m/IJlD0Yt1fM3Vdnzx/sCeOegSi7IAHDVcM/nrMmuw" alt="Fourthwall Logo/Product" class="w-40 h-40 rounded-lg mb-4 object-cover shadow-lg border border-neutral-700">
-                        <h4 class="text-xl font-dm-mono font-semibold text-white mb-2">Fourthwall</h4>
-                        <a href="https://voryx-shop.fourthwall.com" target="_blank" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-sm rounded-lg transition-colors duration-300 shadow-md">
-                            50% OFF & Free US shipping
-                        </a>
-                    </div>
-                </div>
-                <p class="text-neutral-400 font-dm-mono text-sm">
-                    Find unique designs for apparel, accessories, and home goods.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Extra Talend Section-->
-      <section id="talents" class="py-16 md:py-24 bg-neutral-900/50">
-    <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-dm-mono font-bold mb-12 text-white border-b-2 border-slate-700 pb-4">Exceptional Talents & Publications</h2>
-            <p class="text-neutral-300 mb-12 max-w-3xl mx-auto">
-                Beyond my core professional skills, I have cultivated a diverse range of unique achievements, demonstrating dedication to research, writing, and rare international pursuits.
+            
+            <h1 class="text-6xl md:text-8xl font-dm-mono font-bold tracking-tighter mb-8 leading-[1.05]">
+                SOLO FOUNDER & <br> <span class="text-brand-cyan text-glow">STRATEGIC CEO</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-brand-slate max-w-3xl mx-auto mb-12 leading-relaxed">
+                Overseeing a global corporate ecosystem of <span class="text-white font-semibold">confidential $100M+ projects</span> and enterprise SaaS architectures. Bridging elite C-suite networks across 4 continents.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-
-                <div class="space-y-8">
-                    <div class="p-6 bg-neutral-800/70 rounded-xl shadow-lg border border-neutral-700 hover:border-slate-500 transition duration-300">
-                        <h3 class="text-2xl font-dm-mono font-semibold text-white mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13M12 2.253l8 4v13l-8-4-8 4V6.253l8-4z"></path></svg>
-                            Academic Research Published
-                        </h3>
-                        <p class="text-neutral-300 leading-relaxed">
-                            My commitment to advanced learning is highlighted by a **published research paper** in a peer-reviewed journal. The work focuses on **[Placeholder: Mention your research area, e.g., "Advanced AI/ML algorithms" or "Blockchain Security"]**, showcasing my ability to contribute novel insights to the field of Computer Science.
-                        </p>
-                        <a href="#contact" class="inline-block mt-3 text-sm font-dm-mono text-slate-400 hover:text-white underline">Request Paper Details</a>
-                    </div>
-
-                    <div class="p-6 bg-neutral-800/70 rounded-xl shadow-lg border border-neutral-700 hover:border-slate-500 transition duration-300">
-                        <h3 class="text-2xl font-dm-mono font-semibold text-white mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13M12 2.253l8 4v13l-8-4-8 4V6.253l8-4z"></path></svg>
-                            Authored & Published Book
-                        </h3>
-                        <p class="text-neutral-300 leading-relaxed">
-                            I am the proud author of a **published book**, a significant undertaking that demonstrates my expertise in **[Placeholder: Mention the book's topic, e.g., "Web Development Principles" or "Digital Art Techniques"]** and my proficiency in long-form technical/creative writing.
-                        </p>
-                        <a href="#voryx-shop" class="inline-block mt-3 text-sm font-dm-mono text-slate-400 hover:text-white underline">Explore Literary Work</a>
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="p-6 bg-neutral-800/70 rounded-xl shadow-lg border border-neutral-700 hover:border-slate-500 transition duration-300">
-                        <h3 class="text-2xl font-dm-mono font-semibold text-white mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            Multilingual Course Creation
-                        </h3>
-                        <p class="text-neutral-300 leading-relaxed">
-                            Demonstrating cross-cultural communication skills, I have **developed and published a complete multilingual course**. This project covers **[Placeholder: Mention the languages/topic, e.g., "Python in 3 Languages"]** and is a testament to my ability to teach and communicate complex ideas globally.
-                        </p>
-                        <a href="#contact" class="inline-block mt-3 text-sm font-dm-mono text-slate-400 hover:text-white underline">Find My Course</a>
-                    </div>
-
-                    <div class="p-6 bg-neutral-800/70 rounded-xl shadow-lg border border-neutral-700 hover:border-slate-500 transition duration-300">
-                        <h3 class="text-2xl font-dm-mono font-semibold text-white mb-3 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h10a2 2 0 012 2v1h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
-                            Rare International Stamp Collection
-                        </h3>
-                        <p class="text-neutral-300 leading-relaxed">
-                            A unique passion, I maintain a carefully curated **rare international stamp collection**. This hobby requires meticulous research, historical knowledge, and organizational skills, reflecting my appreciation for detail and global history.
-                        </p>
-                        <a href="#about" class="inline-block mt-3 text-sm font-dm-mono text-slate-400 hover:text-white underline">Read More in About</a>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#ventures" class="px-10 py-5 bg-white text-black font-dm-mono font-bold rounded-2xl hover:bg-brand-cyan transition-all shadow-[0_0_40px_rgba(56,189,248,0.2)]">
+                    Explore Ventures
+                </a>
+                <a href="#network" class="px-10 py-5 bg-white/5 border border-white/10 text-white font-dm-mono font-bold rounded-2xl hover:bg-white/10 transition-all">
+                    C-Suite Network
+                </a>
             </div>
         </div>
-    </div>
-      </section>
-    
-    <!-- About Section: Personal introduction -->
-    <section id="about" class="py-16 md:py-24 bg-neutral-800/30">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center md:text-left bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50">
-                <h2 class="text-4xl font-dm-mono font-bold mb-8 text-white">About Akshaya Selvakumar</h2>
-                <img src="Profile1.png" alt="Akshaya Selvakumar's Portrait" class="
-  w-32 h-32       /* Set a perfect square size for mobile */
-  md:w-40 md:h-40 /* Set a perfect square size for desktop */
-  rounded-full    /* Ensures a circular shape */
-  object-cover    /* Ensures the image fills the container without distortion */
-  mx-auto         /* Centers horizontally on mobile */
-  md:float-right  /* Floats right on desktop */
-  md:ml-8         /* Left margin on desktop */
-  mb-6            /* Bottom margin */
-  md:mb-0         /* Remove bottom margin on desktop */
-  shadow-lg
-  border-2 border-slate-600
-">     Hello! I'm Akshaya Selvakumar, a passionate creative professional with a keen eye for detail and a love for storytelling through various mediums. My journey into the world of technology and art began many years ago, driven by a desire to innovate, design, and capture the essence of moments and ideas.
-                </p>
-                <p class="text-neutral-300 mb-4 leading-relaxed">
-                    With a background as a <strong class="text-white">gold medalist in Computer Science</strong>, I specialize in crafting robust software solutions and contributing to the open-source community. Concurrently, my artistic side flourishes through digital painting and creating unique designs for various products. I also have a deep appreciation for the natural world, expressed through my landscape photography.
-                </p>
-                <p class="text-neutral-300 leading-relaxed">
-                    When I'm not behind the keyboard or the camera, I enjoy exploring new technologies and experimenting with different art forms. Let's connect and create something beautiful together!
-                </p>
+        
+        <div class="absolute bottom-10 animate-bounce text-brand-slate opacity-20">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </main>
+
+    <!-- THE CORPORATE ECOSYSTEM -->
+    <section id="ventures" class="py-32 bg-brand-dark px-6">
+        <div class="container mx-auto">
+            <div class="mb-20">
+                <h2 class="text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-4">Enterprise Portfolio</h2>
+                <h3 class="text-4xl md:text-5xl font-dm-mono font-bold">The Ventures</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- GLOBAL BRIDGE -->
+                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="p-4 bg-brand-cyan/10 rounded-2xl text-brand-cyan">
+                            <i class="fa-solid fa-bridge-circle-check text-2xl"></i>
+                        </div>
+                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Confidential Deals</span>
+                    </div>
+                    <h4 class="text-2xl font-dm-mono font-bold mb-6">Global Bridge</h4>
+                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
+                        International strategic consulting firm managing <strong class="text-white">$100M+ private sector projects</strong>. Specialized in bridging East-West business interests with primary hubs in South Korea, Vietnam, India, and the USA.
+                    </p>
+                    <a href="https://connect.akshayaselvakumar.org" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
+                        Access Platform <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </article>
+
+                <!-- FINITE LOGIC SAAS PRO -->
+                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="p-4 bg-purple-500/10 rounded-2xl text-purple-400">
+                            <i class="fa-solid fa-layer-group text-2xl"></i>
+                        </div>
+                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Enterprise SaaS</span>
+                    </div>
+                    <h4 class="text-2xl font-dm-mono font-bold mb-6">Finite Logic <br>SAAS Pro</h4>
+                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
+                        Premium software engineering firm focused on scalable SaaS architectures. Transforming complex business logic into high-conversion digital ecosystems for global clients.
+                    </p>
+                    <a href="https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
+                        View Launch Site <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </article>
+
+                <!-- VORYX -->
+                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="p-4 bg-orange-500/10 rounded-2xl text-orange-400">
+                            <i class="fa-solid fa-bolt-lightning text-2xl"></i>
+                        </div>
+                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Lifestyle Brand</span>
+                    </div>
+                    <h4 class="text-2xl font-dm-mono font-bold mb-6">VORYX</h4>
+                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
+                        Exclusive print-on-demand and design brand where technical precision meets artistic flair. Producing high-end wearable art and bespoke home decor globally.
+                    </p>
+                    <a href="https://voryx.akshayaselvakumar.org/" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
+                        Shop Exclusive <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section: Form and social links -->
-    <section id="contact" class="py-16 md:py-24">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto bg-neutral-900/50 p-8 md:p-12 rounded-xl shadow-2xl border border-neutral-700/50">
-                <h2 class="text-4xl font-dm-mono font-bold text-center mb-8 text-white">Get In Touch</h2>
-                <form action="https://formspree.io/f/xeooydzk" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-dm-mono text-neutral-300 mb-1">Full Name</label>
-                        <input type="text" name="name" id="name" required class="w-full px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-md text-white focus:ring-2 focus:ring-slate-500 focus:border-slate-500 outline-none transition-colors" placeholder="Your Name">
+    <!-- ELITE C-SUITE NETWORK SECTION -->
+    <section id="network" class="py-32 bg-neutral-950 px-6 overflow-hidden">
+        <div class="container mx-auto relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-6">Global Influence</h2>
+                    <h3 class="text-4xl md:text-5xl font-dm-mono font-bold mb-8 leading-tight">Elite Network & C-Suite Synergy</h3>
+                    <p class="text-lg text-brand-slate mb-8 leading-relaxed">
+                        Leveraging <strong>730+ active connections</strong> with Founders, CEOs, Chairmen, and Managing Directors across the most influential global hubs. Our network analytics show a dominant concentration of decision-makers in:
+                    </p>
+                    <ul class="grid grid-cols-2 gap-4 font-dm-mono text-xs uppercase tracking-widest text-white mb-10">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> South Korea</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> USA</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Vietnam</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Luxembourg</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Middle East</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> India</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/akshaya-selvakumar-5b3461278" target="_blank" class="inline-block px-8 py-4 bg-brand-cyan text-black font-dm-mono font-bold rounded-xl hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all">
+                        Network with the CEO
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="glass-panel p-8 rounded-3xl relative z-10">
+                        <div class="flex items-center justify-between mb-8 pb-8 border-b border-white/5">
+                            <span class="text-brand-slate text-[10px] font-dm-mono uppercase">Network Snapshot</span>
+                            <span class="text-brand-cyan text-sm font-dm-mono">730+ Connections</span>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-sm font-dm-mono">CEOs / Founders</span>
+                                <span class="h-1 w-32 bg-brand-cyan rounded-full"></span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-sm font-dm-mono">Managing Directors</span>
+                                <span class="h-1 w-24 bg-brand-cyan/60 rounded-full"></span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-sm font-dm-mono">Presidents / Chairmen</span>
+                                <span class="h-1 w-20 bg-brand-cyan/40 rounded-full"></span>
+                            </div>
+                        </div>
+                        <p class="mt-8 text-[10px] text-brand-slate leading-relaxed italic">
+                            "Connecting the elite decision makers from South Korea to the United States to drive $100M+ international project execution."
+                        </p>
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-dm-mono text-neutral-300 mb-1">Email Address</label>
-                        <input type="email" name="email" id="email" required class="w-full px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-md text-white focus:ring-2 focus:ring-slate-500 focus:border-slate-500 outline-none transition-colors" placeholder="you@example.com">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-dm-mono text-neutral-300 mb-1">Message</label>
-                        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-md text-white focus:ring-2 focus:ring-slate-500 focus:border-slate-500 outline-none transition-colors" placeholder="Your message..."></textarea>
-                    </div>
-                    <div>
-                     <div class="pt-2"> 
-                         <div class="flex items-center">
-                            <input type="checkbox" name="newsletter_subscribe" id="newsletter_subscribe" class="h-4 w-4 text-slate-500 bg-neutral-800 border-neutral-700 rounded focus:ring-slate-500>
-                              <label for="newsletter_subscribe" class="ml-2 block text-sm font-dm-mono text-neutral-300 select-none cursor-pointer">I want to subscribe to the Akshaya CEO newsletter for updates on new projects and arts.</label>
-                         </div>
-                         </div>
-                    </div>   
-                        <button type="submit" class="w-full px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-dm-mono text-lg rounded-lg transition-colors duration-300 shadow-md">
-                            Send Message
-                        </button>
-                    </div>
-                </form>              
-  <div class="mt-10 text-center">
-    <p class="text-neutral-400 font-dm-mono">Or reach out via:</p>
-    <p class="text-white mt-2">akshayaselvakumar532@gmail.com | <a href="https://x.com/@VORYXofficial">DM @VoryxOfficial</a></p>
-    
-    <div class="flex justify-center space-x-6 mt-6">
-        <a href="https://x.com/@VORYXofficial" class="text-xl text-neutral-400 hover:text-white transition-colors" aria-label="Twitter/X">
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="https://paypal.me/AkshayaSelvakumar" class="text-xl text-neutral-400 hover:text-white transition-colors" aria-label="Hire/Collaborate">
-            <i class="fa-solid fa-wallet" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/akshaya-selvakumar-5b3461278" class="text-xl text-neutral-400 hover:text-white transition-colors" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="https://ko-fi.com/akshayavoryx" class="text-xl text-neutral-400 hover:text-white transition-colors" aria-label="Donate">
-            <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
-        </a>
-        <a href="https://buymeacoffee.com/williamestfanuniverse" class="text-xl text-neutral-400 hover:text-white transition-colors" aria-label="Sponsor">
-            <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
-        </a>
-    </div>
-</div>
-</div>
- </div>          
+                    <!-- Decorative blur -->
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[100px]"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="py-8 bg-neutral-950 text-center">
-        <p class="text-neutral-500 text-sm font-dm-mono">&copy; <span id="currentYear"></span> Akshaya Selvakumar. All Rights Reserved.</p>
-        <p class="text-neutral-600 text-xs font-dm-mono mt-1">Designed with <span class="text-red-500">&hearts;</span> and a touch of //GLYPH_STYLE</p>
+    <!-- TALENTS & ACHIEVEMENTS -->
+    <section id="talents" class="py-32 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-center text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-4">Multi-Disciplinary Excellence</h2>
+            <h3 class="text-center text-4xl md:text-5xl font-dm-mono font-bold mb-20">Key Achievements</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-panel p-8 rounded-3xl group">
+                    <i class="fa-solid fa-award text-3xl text-yellow-500 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">M.Sc Gold Medalist</h5>
+                    <p class="text-brand-slate text-xs leading-relaxed">Top academic performance in Computer Science, providing the foundation for deep technical architectures.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-3xl group">
+                    <i class="fa-solid fa-book text-3xl text-brand-cyan mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">Published Author</h5>
+                    <p class="text-brand-slate text-xs leading-relaxed">Contributing novel research papers and long-form literature in the tech and creative sectors.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-3xl group">
+                    <i class="fa-solid fa-code text-3xl text-emerald-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">55+ OSS Repos</h5>
+                    <p class="text-brand-slate text-xs leading-relaxed">Driving the future of open-source development with a dedicated global following on GitHub.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-3xl group">
+                    <i class="fa-solid fa-stamp text-3xl text-orange-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">Global Philately</h5>
+                    <p class="text-brand-slate text-xs leading-relaxed">Curation of rare international stamps, signifying attention to detail and historical appreciation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-32 bg-brand-dark px-6">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto glass-panel p-10 md:p-20 rounded-[3rem] relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="relative w-64 h-64 flex-shrink-0">
+                        <img src="Profile1.png" alt="Akshaya Selvakumar" class="w-full h-full object-cover rounded-[2rem] border-2 border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute -bottom-4 -right-4 bg-brand-cyan text-black font-dm-mono text-[10px] font-bold px-4 py-2 rounded-full uppercase">Founder/CEO</div>
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-dm-mono font-bold mb-8">The Professional Philosophy</h3>
+                        <p class="text-brand-slate leading-relaxed mb-6">
+                            Akshaya Selvakumar is a Computer Science visionary and solo founder orchestrating a multi-faceted corporate ecosystem. My journey is defined by the seamless integration of <strong class="text-white">technical mastery and global business intelligence.</strong>
+                        </p>
+                        <p class="text-brand-slate leading-relaxed">
+                            Through Global Bridge, I manage the complexities of international trade and $100M+ strategic projects, while Finite Logic SAAS Pro pushes the boundaries of enterprise-grade software. This portfolio serves as the central hub for our global expansion, connecting high-level talent with elite capital and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-32 bg-neutral-950 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl md:text-5xl font-dm-mono font-bold mb-6">Strategic Cooperation</h3>
+                <p class="text-brand-slate mb-16 font-dm-mono text-sm">Now accepting inquiries for international ventures and board-level consulting.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 text-left">
+                    <a href="mailto:ceo@akshayaselvakumar.com" class="glass-panel p-8 rounded-3xl hover:bg-white/5 flex items-center">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 text-brand-cyan"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="text-[10px] font-dm-mono text-brand-slate uppercase block mb-1">CEO Direct</span>
+                            <span class="text-white font-dm-mono">ceo@akshayaselvakumar.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/akshaya-selvakumar-5b3461278" target="_blank" class="glass-panel p-8 rounded-3xl hover:bg-white/5 flex items-center">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 text-brand-cyan"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <span class="text-[10px] font-dm-mono text-brand-slate uppercase block mb-1">Corporate Network</span>
+                            <span class="text-white font-dm-mono">Message Akshaya</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- QUICK FORM -->
+                <form action="https://formspree.io/f/xeooydzk" method="POST" class="text-left space-y-6 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="FULL NAME" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white">
+                        <input type="email" name="email" placeholder="CORPORATE EMAIL" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white">
+                    </div>
+                    <textarea name="message" placeholder="VENTURE PROPOSAL / INQUIRY" rows="5" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white"></textarea>
+                    
+                    <button type="submit" class="w-full bg-white text-black py-5 rounded-2xl font-dm-mono font-bold text-sm uppercase tracking-[0.2em] hover:bg-brand-cyan transition-all">
+                        Dispatch Inquiry
+                    </button>
+                </form>
+
+                <div class="mt-32 flex justify-center space-x-12 text-brand-slate text-xl">
+                    <a href="https://x.com/@VORYXofficial" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://ko-fi.com/akshayavoryx" target="_blank" class="hover:text-white transition-colors"><i class="fa-solid fa-mug-hot"></i></a>
+                    <a href="https://paypal.me/AkshayaSelvakumar" target="_blank" class="hover:text-white transition-colors"><i class="fa-solid fa-wallet"></i></a>
+                    <a href="https://github.com/Akshayadeveloper" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/5 bg-brand-dark px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
+            <p class="text-[10px] font-dm-mono text-brand-slate uppercase tracking-widest">
+                &copy; <span id="year">2025</span> Akshaya Selvakumar. All Rights Reserved.
+            </p>
+            <div class="flex space-x-6 text-[9px] font-dm-mono text-brand-slate uppercase tracking-widest">
+                <a href="#hero" class="hover:text-white transition-colors">Terminus</a>
+                <a href="#ventures" class="hover:text-white transition-colors">Ventures</a>
+                <a href="#network" class="hover:text-white transition-colors">Network</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Image Modal: Hidden by default, appears on image click -->
-    <div id="imageModal" class="modal fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible">
-        <div class="modal-content bg-neutral-900 p-4 rounded-lg shadow-2xl max-w-3xl max-h-[90vh] w-full transform scale-95 -translate-y-10 relative">
-            <img id="modalImage" src="" alt="Full-size view" class="max-w-full max-h-[80vh] object-contain mx-auto rounded">
-            <button id="closeModal" class="absolute top-3 right-3 text-neutral-300 hover:text-white transition-colors text-3xl font-dm-mono leading-none">&times;</button>
-        </div>
-    </div>
-
-    <!-- JavaScript for interactivity -->
     <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent default anchor click behavior
-                const targetId = this.getAttribute('href'); // Get the target section ID
-                const targetElement = document.querySelector(targetId); // Select the target element
-                if (targetElement) {
-                    // Scroll to the target element with smooth animation
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth reveal on scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
-
-        // Update current year in the footer dynamically
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Image Modal Logic: Handles opening and closing the image lightbox
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeModalButton = document.getElementById('closeModal');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        // Add click event listener to each gallery item to open the modal
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const imgSrc = item.querySelector('img').src; // Get the source of the clicked image
-                // Modify placeholder URL for higher resolution in modal if desired
-                // This replaces the 600x450 or 400x300 dimensions with 1200x900 for a larger view
-                modalImage.src = imgSrc.replace(/600x450|400x300/, '1200x900');
-                modal.classList.add('open'); // Add 'open' class to show modal
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling when modal is open
-            });
-        });
-
-        // Function to close the modal
-        const closeModal = () => {
-            modal.classList.remove('open'); // Remove 'open' class to hide modal
-            document.body.style.overflow = ''; // Restore background scrolling
-        };
-
-        // Event listener for closing modal via button click
-        closeModalButton.addEventListener('click', closeModal);
-
-        // Event listener for closing modal via Escape key press
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && modal.classList.contains('open')) {
-                closeModal();
-            }
-        });
-
-        // Event listener for closing modal when clicking outside the modal content (on the backdrop)
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) { // Check if the click is directly on the modal backdrop
-                closeModal();
-            }
-        });
-
-        // Simple check for hero background image load for debugging/info
-        const heroSection = document.getElementById('hero');
-        // Extract URL from background-image style, handling linear-gradient part
-        const heroBgUrlMatch = heroSection.style.backgroundImage.match(/url\(['"]?(.*?)['"]?\)/);
-        const heroBgUrl = heroBgUrlMatch ? heroBgUrlMatch[1] : null;
-
-        if (heroBgUrl) {
-            const img = new Image();
-            img.src = heroBgUrl;
-            img.onload = () => console.log('Hero background image loaded successfully.');
-            img.onerror = () => {
-                console.error('Hero background image failed to load. Using fallback gradient.');
-                // Fallback is already handled by CSS, this is just for console info
-            }
-        }
     </script>
 </body>
 </html>
