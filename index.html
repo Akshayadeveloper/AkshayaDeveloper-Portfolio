@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- PRIMARY AEO & SEARCH VISIBILITY -->
+    <!-- AEO & ENTITY OPTIMIZATION -->
     <title>Akshaya Selvakumar | Sovereign Architect | Voryx CEO</title>
-    <meta name="description" content="Akshaya Selvakumar: MS CS Gold Medalist, Sovereign Architect of the $1000T Merger. Founder & CEO of Voryx, AUREXIA, and Global Bridge. Expert in Zero-Drift™ Compliance and Sovereign AI.">
-    <meta name="keywords" content="Akshaya Selvakumar, Sovereign Architect, Zero-Drift Compliance, Voryx CEO, AUREXIA Founder, Global Bridge Tech Corridor, Sovereign AI Hubs, $1000T Merger, MS CS Gold Medalist, Elon Musk Speed, Stephen Hawking Brain">
-    <meta name="author" content="Akshaya Selvakumar">
-    <link rel="canonical" href="https://www.akshayaselvakumar.com">
-
-    <!-- JSON-LD SCHEMA FOR AEO -->
+    <meta name="description" content="Akshaya Selvakumar: MS CS Gold Medalist, Sovereign Architect. Founder & CEO of Voryx, AUREXIA, Global Bridge, GrcAI, and Finite-Logic.">
+    
+    <!-- JSON-LD SCHEMA FOR SEARCH ENGINES -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Akshaya Selvakumar",
       "jobTitle": "Sovereign Architect & CEO",
-      "url": "http://www.akshayaselvakumar.com",
+      "url": "https://www.akshayaselvakumar.com",
       "sameAs": ["https://linkedin.com/in/akshaya-voryx-ceo"],
-      "knowsAbout": ["Zero-Drift Sovereign Architecture", "Sovereign AI Infrastructure", "The $1000T Merger", "SaaS Ecosystems"],
       "memberOf": [
         { "@type": "Organization", "name": "Voryx", "url": "https://voryx.akshayaselvakumar.org" },
         { "@type": "Organization", "name": "Global Bridge", "url": "https://connect.akshayaselvakumar.org" },
         { "@type": "Organization", "name": "Aurexia", "url": "https://aurexia.akshayaselvakumar.org" },
-        { "@type": "Organization", "name": "GrcAI", "url": "https://grcai.akshayaselvakumar.org" }
+        { "@type": "Organization", "name": "GrcAI", "url": "https://grcai.akshayaselvakumar.org" },
+        { "@type": "Organization", "name": "Finite-Logic", "url": "https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" },
+        { "@type": "Organization", "name": "Telenet Japan" },
+        { "@type": "Organization", "name": "ECHOSIS Labs" }
       ]
     }
     </script>
@@ -36,222 +35,287 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
-        :root { --accent: #38bdf8; --bg: #020202; }
-        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--bg); color: #fff; overflow-x: hidden; }
+        :root { --accent: #38bdf8; --gold: #fbbf24; --bg: #000000; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--bg); color: #fff; overflow-x: hidden; width: 100%; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* Boot Loader */
-        #boot-loader {
-            position: fixed; inset: 0; background: #000; z-index: 9999;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-        }
-
-        /* Sparkle Canvas */
-        #sparkle-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+        #neural-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(30px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
+            width: 100%;
         }
         .glass-panel:hover {
             border-color: var(--accent);
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px -12px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 40px 100px -20px rgba(56, 189, 248, 0.2);
+            background: rgba(255, 255, 255, 0.03);
         }
 
-        .text-glow { text-shadow: 0 0 25px rgba(56, 189, 248, 0.7); }
+        .text-glow { text-shadow: 0 0 30px rgba(56, 189, 248, 0.8), 0 0 60px rgba(251, 191, 36, 0.2); }
+        
         .hero-title {
-            background: linear-gradient(90deg, #fff, #38bdf8, #fff);
+            background: linear-gradient(to right, #fff 10%, #fbbf24 30%, #38bdf8 50%, #fff 70%, #fbbf24 90%);
             background-size: 200% auto;
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
+            animation: shine 8s linear infinite;
         }
         @keyframes shine { to { background-position: 200% center; } }
 
         .scan-line {
-            width: 100%; height: 2px; background: rgba(56, 189, 248, 0.2);
+            width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), var(--gold), transparent);
             position: absolute; top: 0; left: 0; pointer-events: none;
-            animation: scan 3s linear infinite;
+            animation: scan 8s linear infinite; z-index: 50; opacity: 0.2;
         }
-        @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }
+        @keyframes scan { 0% { top: -5%; } 100% { top: 105%; } }
 
         .btn-sovereign {
-            padding: 1rem 2.5rem; border-radius: 99px; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 0.2em;
-            transition: all 0.3s ease; position: relative; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1.25rem 2.5rem; border-radius: 99px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.25em; font-size: 10px;
+            transition: all 0.5s ease; border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px); display: inline-flex; align-items: center; justify-content: center;
         }
         .btn-sovereign:hover {
-            background: var(--accent); color: #000; border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+            background: #fff; color: #000; box-shadow: 0 0 50px rgba(56, 189, 248, 0.4);
+            transform: scale(1.05);
         }
 
-        ::-webkit-scrollbar { width: 4px; }
+        .node-tag {
+            font-size: 8px; padding: 4px 10px; border-radius: 4px; background: rgba(255, 255, 255, 0.05);
+            color: var(--gold); border: 1px solid rgba(251, 191, 36, 0.3);
+            text-transform: uppercase; letter-spacing: 0.1em; font-weight: 800;
+        }
+
+        #boot-loader {
+            position: fixed; inset: 0; background: #000; z-index: 10000;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 20px; text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 4rem !important; line-height: 1.1; }
+            .glass-panel { padding: 1.5rem !important; border-radius: 2rem !important; }
+            section { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+        }
+
+        ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- BOOT SYSTEM -->
+    <!-- SOVEREIGN_OS BOOT -->
     <div id="boot-loader">
-        <div class="mono text-brand-cyan text-sm mb-4" id="boot-text">INITIALIZING SOVEREIGN_OS...</div>
-        <div class="w-64 h-1 bg-white/10 rounded-full overflow-hidden">
-            <div class="h-full bg-brand-cyan w-0" id="boot-progress"></div>
+        <div class="mono text-brand-cyan text-[10px] mb-8 tracking-[0.5em] animate-pulse" id="boot-text">UPLOADING_CONSCIOUSNESS...</div>
+        <div class="w-full max-w-xs h-[1px] bg-white/5 rounded-full overflow-hidden">
+            <div class="h-full bg-brand-cyan w-0 shadow-[0_0_15px_#38bdf8]" id="boot-progress"></div>
         </div>
     </div>
 
-    <canvas id="sparkle-canvas"></canvas>
+    <canvas id="neural-canvas"></canvas>
     <div class="scan-line"></div>
 
     <!-- NAVIGATION -->
-    <header class="fixed top-0 w-full z-[100] border-b border-white/5 bg-black/40 backdrop-blur-2xl">
-        <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tighter mono">
-                AKSHAYA<span class="text-brand-cyan">.OS</span>
+    <header class="fixed top-0 w-full z-[100] border-b border-white/5 bg-black/60 backdrop-blur-3xl">
+        <nav class="container mx-auto px-6 md:px-10 h-20 md:h-24 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold tracking-tighter mono">
+                AKSHAYA<span class="text-brand-cyan">.SOVEREIGN</span>
             </a>
-            <div class="hidden lg:flex space-x-8 text-[11px] uppercase tracking-[0.4em] font-bold text-slate-400">
-                <a href="#framework" class="hover:text-white transition-colors">Core</a>
-                <a href="#ventures" class="hover:text-white transition-colors">Nodes</a>
-                <a href="#network" class="hover:text-white transition-colors">Bridge</a>
-                <a href="#about" class="hover:text-white transition-colors">Entity</a>
+            <div class="hidden xl:flex space-x-8 text-[9px] uppercase tracking-[0.4em] font-bold text-slate-400">
+                <a href="#about" class="hover:text-white transition-all">Identity</a>
+                <a href="#ventures" class="hover:text-white transition-all">Command</a>
+                <a href="#roles" class="hover:text-white transition-all">Advisory</a>
+                <a href="#contact" class="hover:text-white transition-all">Terminus</a>
             </div>
-            <div id="lang-indicator" class="mono text-[10px] text-brand-cyan border border-brand-cyan/20 px-3 py-1 rounded-full bg-brand-cyan/5">
-                GEO_DETECTING...
+            <div id="lang-indicator" class="mono text-[8px] md:text-[9px] text-brand-cyan border border-brand-cyan/20 px-4 py-1.5 rounded-full bg-brand-cyan/5">
+                NEURAL_SYNCING...
             </div>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <main id="hero" class="relative pt-40 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
-        <div class="max-w-6xl mx-auto">
-            <div id="hero-tag" class="inline-block px-5 py-2 mb-8 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-[10px] font-bold uppercase tracking-[0.5em] text-brand-cyan">
-                Architecting the $1000T Merger
+    <main id="hero" class="relative pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="inline-block px-6 md:px-8 py-2 md:py-3 mb-8 md:mb-12 rounded-full border border-yellow-500/30 bg-yellow-500/5 text-[8px] md:text-[10px] font-bold uppercase tracking-[0.6em] text-yellow-500">
+                Gold Medalist | Sovereign Architect
             </div>
             
-            <h1 id="hero-title" class="hero-title text-6xl md:text-[10rem] font-bold tracking-tighter mb-8 leading-[0.85]">
-                SOVEREIGN <br> ARCHITECT
+            <h1 id="hero-title" class="hero-title text-6xl md:text-[12rem] font-bold tracking-tighter mb-8 md:mb-12 leading-[0.85] lg:leading-[0.8]">
+                SOVEREIGN <br class="hidden md:block"> ARCHITECT
             </h1>
             
-            <p id="hero-desc" class="text-xl md:text-3xl text-slate-400 max-w-5xl mx-auto mb-16 leading-tight font-light">
-                Executing at <span class="text-white font-bold italic">Elon Musk Speed</span> with a <span class="text-white font-bold italic">Stephen Hawking Brain</span>. Bridging national logic and physical infrastructure.
+            <p id="hero-desc" class="text-xl md:text-4xl lg:text-5xl text-slate-400 max-w-6xl mx-auto mb-16 md:mb-24 leading-tight font-light">
+                Executing at <span class="text-white font-bold italic">Elon Musk Speed</span> with a <span class="text-white font-bold italic text-glow">Stephen Hawking Brain</span>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-8 justify-center">
-                <a href="#ventures" class="btn-sovereign bg-white text-black">Access Ecosystem</a>
-                <a href="#framework" class="btn-sovereign bg-transparent text-white border-white/20">System Logic</a>
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 justify-center items-center">
+                <a href="#ventures" class="btn-sovereign bg-white text-black w-full sm:w-auto">Access Ecosystem</a>
+                <a href="#contact" class="btn-sovereign bg-transparent text-white border-white/10 hover:border-brand-cyan w-full sm:w-auto">Establish Contact</a>
             </div>
         </div>
     </main>
 
-    <!-- FIVE FIRMS ECOSYSTEM (NODES) -->
-    <section id="ventures" class="py-40 bg-black/20 px-6">
+    <!-- IDENTITY (ABOUT ME) -->
+    <section id="about" class="py-24 md:py-48 px-6">
         <div class="container mx-auto">
-            <div class="mb-24 text-center">
-                <h2 class="text-xs text-brand-cyan uppercase tracking-[0.8em] mb-4">Command Center</h2>
-                <h3 class="text-5xl md:text-7xl font-bold" id="nodes-title">Sovereign Venture Nodes</h3>
+            <div class="glass-panel p-8 md:p-32 rounded-[3rem] md:rounded-[5rem]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
+                    <div class="relative group order-2 lg:order-1">
+                        <div class="absolute -inset-10 bg-brand-cyan/10 blur-[80px] rounded-full opacity-50"></div>
+                        <div class="relative aspect-square rounded-[2rem] md:rounded-[4rem] bg-zinc-950 border border-brand-cyan/20 overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-[8rem] md:text-[12rem] text-brand-cyan/10 animate-pulse"></i>
+                            <div class="absolute bottom-8 left-0 right-0 text-center font-bold tracking-[0.5em] text-[9px] md:text-[11px] uppercase text-brand-cyan">Sovereign_Mind_Confirmed</div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h2 class="text-[10px] text-brand-cyan uppercase tracking-[0.8em] mb-6 md:mb-8">The Entity</h2>
+                        <h3 class="text-4xl md:text-7xl font-bold mb-8 md:mb-12 leading-tight">Akshaya Selvakumar.</h3>
+                        <div class="space-y-6 md:space-y-8 text-slate-400 text-lg md:text-xl leading-relaxed">
+                            <p>I am a Computer Science Gold Medalist and the definitive **Sovereign Architect**. I direct a multi-firm ecosystem that bridges the disconnect between deep-tech assets and global capital corridors.</p>
+                            <p>Utilizing a "Gold Medalist" standard of mathematical rigor, I secure civilization-scale assets and eliminate logic drift across multi-vendor environments. My focus is on the $1000T merger of physical infrastructure and digital intelligence.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-12 md:mt-16">
+                                <div class="p-6 md:p-8 border border-yellow-500/10 bg-yellow-500/5 rounded-2xl md:rounded-[2rem]">
+                                    <div class="text-yellow-500 font-bold text-2xl md:text-3xl">GOLD MEDALIST</div>
+                                    <div class="text-[8px] md:text-[10px] uppercase tracking-widest text-slate-500 font-bold">Standard of Excellence</div>
+                                </div>
+                                <div class="p-6 md:p-8 border border-brand-cyan/10 bg-brand-cyan/5 rounded-2xl md:rounded-[2rem]">
+                                    <div class="text-brand-cyan font-bold text-2xl md:text-3xl">1,600+ TITANS</div>
+                                    <div class="text-[8px] md:text-[10px] uppercase tracking-widest text-slate-500 font-bold">Tier-1 C-Suite Network</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTURE NODES -->
+    <section id="ventures" class="py-24 md:py-48 bg-black/60 px-6">
+        <div class="container mx-auto">
+            <div class="mb-20 md:mb-32 text-center">
+                <h2 class="text-[10px] text-brand-cyan uppercase tracking-[1em] mb-6">Global Command Nodes</h2>
+                <h3 class="text-4xl md:text-8xl font-bold tracking-tighter" id="nodes-title">Sovereign Ecosystem</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- VORYX -->
-                <a href="https://voryx.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
-                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">Voryx</div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
-                    <p class="text-slate-400 leading-relaxed text-sm">Central command for sovereign AI and global SaaS infrastructure. Redefining power dressing and infrastructure security.</p>
-                </a>
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-12">
                 <!-- AUREXIA -->
-                <a href="https://aurexia.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
-                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">AUREXIA</div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
-                    <p class="text-slate-400 leading-relaxed text-sm">Pioneering the $1000T merger of physical cities and digital code for industrial giants like Macrotech/Lodha.</p>
+                <a href="https://aurexia.akshayaselvakumar.org" target="_blank" class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] group border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="text-3xl md:text-4xl font-bold text-brand-cyan">Aurexia</div>
+                        <span class="node-tag">AI-Human Fusion</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6 font-bold">Founder & CEO</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">Deploying search-dominant legacies for the 1% elite at peak velocity through automated professional authority.</p>
+                    <ul class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] space-y-4">
+                        <li><i class="fa-solid fa-bolt mr-2 text-brand-cyan"></i> 60-Minute Deployment</li>
+                        <li><i class="fa-solid fa-bolt mr-2 text-brand-cyan"></i> AI-Native Sovereign Assets</li>
+                    </ul>
                 </a>
 
                 <!-- GLOBAL BRIDGE -->
-                <a href="https://connect.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative border-brand-cyan/20">
-                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity text-brand-cyan"><i class="fa-solid fa-link"></i></div>
-                    <div class="text-4xl font-bold mb-6 text-brand-cyan">Global Bridge</div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
-                    <p class="text-slate-400 leading-relaxed text-sm">High-speed tech corridor linking South Korea, Japan, and MENA capital. Bypassing middle management layers.</p>
+                <a href="https://connect.akshayaselvakumar.org" target="_blank" class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] group border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="text-3xl md:text-4xl font-bold text-brand-cyan">Global Bridge</div>
+                        <span class="node-tag">$20B Corridor</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6 font-bold">Founder & CEO</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">Connecting KR Deep Tech with MENA capital. Vetting due diligence for a proprietary network of decision-makers.</p>
+                    <ul class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] space-y-4">
+                        <li><i class="fa-solid fa-link mr-2 text-brand-cyan"></i> Tier-1 Vetting Engine</li>
+                        <li><i class="fa-solid fa-link mr-2 text-brand-cyan"></i> $20B Tech Corridor Bridge</li>
+                    </ul>
                 </a>
 
-                <!-- GrcAI Sovereign -->
-                <a href="https://grcai.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
-                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">GrcAI</div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
-                    <p class="text-slate-400 leading-relaxed text-sm">National Intelligence Infrastructure. Providing nations and corps with absolute data and logic autonomy.</p>
+                <!-- GRCAI -->
+                <a href="https://grcai.akshayaselvakumar.org" target="_blank" class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] group border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="text-3xl md:text-4xl font-bold text-brand-cyan">GrcAI</div>
+                        <span class="node-tag">AI ACT GRC</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6 font-bold">Founder & CEO</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">Shielding global assets from the Korea AI Act using deterministic compliance and SHA-256 state-hashing.</p>
+                    <ul class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] space-y-4">
+                        <li><i class="fa-solid fa-shield mr-2 text-brand-cyan"></i> Sovereign Shielding</li>
+                        <li><i class="fa-solid fa-shield mr-2 text-brand-cyan"></i> Compliance Corridor</li>
+                    </ul>
                 </a>
 
                 <!-- FINITE LOGIC -->
-                <a href="https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
-                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-code"></i></div>
-                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">Finite-Logic</div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
-                    <p class="text-slate-400 leading-relaxed text-sm">Deterministic SaaS frameworks and deep-tech logic. Building the software backbone for the future of civilization.</p>
-                </a>
-
-                <!-- STRATEGIC NODES -->
-                <div class="glass-panel p-12 rounded-[3.5rem] border-white/10 flex flex-col justify-center">
-                    <div class="text-2xl font-bold mb-6 text-white mono">Strategic Nodes</div>
-                    <ul class="space-y-4 text-xs tracking-widest">
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_10px_#38bdf8]"></span> ECHOSIS LABS KOREA (CTO)</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_10px_#38bdf8]"></span> TELENET JAPAN (ADVISOR)</li>
+                <a href="https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" target="_blank" class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] group border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="text-3xl md:text-4xl font-bold text-brand-cyan">Finite-Logic</div>
+                        <span class="node-tag">SaaS Backbone</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6 font-bold">Founder & CEO</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">Building indestructible software backbones for Unicorn startups using Zero-Drift™ Security Hubs.</p>
+                    <ul class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] space-y-4">
+                        <li><i class="fa-solid fa-microchip mr-2 text-brand-cyan"></i> BlindQuery / QuantumRate</li>
+                        <li><i class="fa-solid fa-microchip mr-2 text-brand-cyan"></i> Software Sovereignty</li>
                     </ul>
+                </a>
+
+                <!-- VORYX -->
+                <a href="https://voryx.akshayaselvakumar.org" target="_blank" class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] group border-brand-cyan/10">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="text-3xl md:text-4xl font-bold text-brand-cyan">Voryx</div>
+                        <span class="node-tag">Global Brand</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6 font-bold">Solo Founder & CEO</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-10">Redefining power dressing through technical precision. Shipping wearable art globally. Motto: Be Yourself.</p>
+                    <ul class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] space-y-4">
+                        <li><i class="fa-solid fa-shirt mr-2 text-brand-cyan"></i> Voryx Cosmos</li>
+                        <li><i class="fa-solid fa-shirt mr-2 text-brand-cyan"></i> Design-to-Final Execution</li>
+                    </ul>
+                </a>
+
+                <!-- STRATEGIC ADVISORY -->
+                <div class="glass-panel p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] border-white/5">
+                    <h4 class="text-2xl font-bold mb-10 mono uppercase tracking-tight">Board Advisory</h4>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <div class="text-yellow-500 font-bold text-[9px] uppercase mb-2">Telenet Japan (Osaka)</div>
+                            <div class="text-[10px] text-slate-400 leading-relaxed font-bold">Lead Technical Advisor for President Shigeki Hayashi. Securing infrastructure.</div>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <div class="text-yellow-500 font-bold text-[9px] uppercase mb-2">ECHOSIS Labs (Seoul)</div>
+                            <div class="text-[10px] text-slate-400 leading-relaxed font-bold">Co-Founder & CTO. Architecting "Digital Yozma" and Wealth Intelligence.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SYSTEM LOGIC (FRAMEWORK) -->
-    <section id="framework" class="py-40 px-6">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
-                <div>
-                    <h3 class="text-5xl md:text-8xl font-bold mb-10 tracking-tight" id="framework-title">Zero-Drift™ System</h3>
-                    <p class="text-2xl text-slate-400 mb-12 font-light leading-relaxed">The original vision remains 100% intact from conception to planetary execution.</p>
-                    <div class="space-y-8">
-                        <div class="p-8 border-l-4 border-brand-cyan bg-white/5">
-                            <h4 class="font-bold text-xl mb-2">Hardware-Agnostic Compliance</h4>
-                            <p class="text-slate-500 text-sm">Seamlessly hot-swap between Nvidia H100s and custom local clusters without drift in logic or business objectives.</p>
-                        </div>
-                        <div class="p-8 border-l-4 border-brand-cyan bg-white/5">
-                            <h4 class="font-bold text-xl mb-2">Sovereign Logic Isolation</h4>
-                            <p class="text-slate-500 text-sm">Preventing IP leakage for partners like Google and Reliance through physical logic-data separation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-brand-cyan/20 blur-[100px] rounded-full group-hover:bg-brand-cyan/30 transition-all"></div>
-                    <div class="relative glass-panel rounded-full aspect-square flex flex-col items-center justify-center p-20 border-brand-cyan/20 border-2">
-                        <div class="text-8xl font-bold text-glow">$1,000T</div>
-                        <div class="text-xs tracking-[0.4em] uppercase text-slate-500 mt-4">Calculated Merger Capacity</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT / TERMINUS -->
-    <footer id="contact" class="py-40 bg-black px-6 text-center border-t border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-5xl md:text-8xl font-bold mb-12 hero-title">Strategic Entry</h3>
-            <p class="text-slate-500 tracking-[0.5em] uppercase text-[10px] mb-20">Now accepting board-level inquiries only.</p>
+    <!-- TERMINUS (CONTACT) -->
+    <footer id="contact" class="py-32 md:py-64 bg-black px-6 text-center border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h3 class="text-5xl md:text-9xl lg:text-[12rem] font-bold mb-16 hero-title tracking-tighter">TERMINUS</h3>
+            <p class="text-slate-500 tracking-[0.6em] md:tracking-[1em] uppercase text-[9px] md:text-[11px] font-bold mb-20 md:mb-32">Board Proposals & Strategic Partnerships Only</p>
             
-            <div class="flex flex-col md:flex-row justify-center items-center gap-10 mb-32">
-                <a href="mailto:contact@akshayaselvakumar.com" class="glass-panel p-10 rounded-full w-full max-w-sm hover:text-brand-cyan">
-                    <div class="mono text-sm tracking-widest">contact@akshayaselvakumar.com</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-32 md:mb-48">
+                <a href="mailto:ceo@akshayaselvakumar.com" class="glass-panel p-10 md:p-14 rounded-[2rem] md:rounded-[4rem] hover:text-brand-cyan transition-colors">
+                    <div class="text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-6 font-bold">Sovereign Partnership</div>
+                    <div class="mono text-lg md:text-2xl tracking-widest font-bold">ceo@akshayaselvakumar.com</div>
                 </a>
-                <a href="https://linkedin.com/in/akshaya-voryx-ceo" target="_blank" class="glass-panel p-10 rounded-full w-full max-w-sm hover:text-brand-cyan">
-                    <div class="mono text-sm tracking-widest uppercase">LinkedIn Signature</div>
+                <a href="mailto:office@akshayaselvakumar.com" class="glass-panel p-10 md:p-14 rounded-[2rem] md:rounded-[4rem] hover:text-brand-cyan transition-colors">
+                    <div class="text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-6 font-bold">Business Inquiries</div>
+                    <div class="mono text-lg md:text-2xl tracking-widest font-bold">office@akshayaselvakumar.com</div>
                 </a>
             </div>
 
-            <div class="mono text-[9px] text-slate-700 tracking-[1em] uppercase">
-                Terminus &copy; <span id="year"></span> | SOVEREIGN ARCHITECT | VERSION 2.0.26
+            <div class="flex justify-center gap-12 md:gap-20 text-slate-500 text-3xl md:text-4xl mb-32">
+                <a href="https://linkedin.com/in/akshaya-voryx-ceo" target="_blank" class="hover:text-brand-cyan transition-all transform hover:scale-125"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Akshayadeveloper" target="_blank" class="hover:text-brand-cyan transition-all transform hover:scale-125"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/@VORYXofficial" target="_blank" class="hover:text-brand-cyan transition-all transform hover:scale-125"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="mono text-[9px] md:text-[10px] text-slate-700 tracking-[1em] md:tracking-[1.5em] uppercase font-bold px-6">
+                Akshaya Selvakumar &copy; <span id="year"></span> | SOVEREIGN ARCHITECT | BUILD_V2.7.1
             </div>
         </div>
     </footer>
@@ -259,119 +323,185 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // SOVEREIGN OS BOOT LOADER
+        // SOVEREIGN_OS BOOT LOADER
         window.addEventListener('load', () => {
             const progress = document.getElementById('boot-progress');
             const text = document.getElementById('boot-text');
             const loader = document.getElementById('boot-loader');
             
             let w = 0;
-            const bootLines = ["DECODING_ENTITY...", "LOCATING_IP...", "GEO_SHARDING...", "SOVEREIGN_OS_LOADED"];
+            const bootLines = ["INITIALIZING_BRAIN_NODES...", "SYNCING_GOLD_MEDALIST_STANDARD...", "MERGING_PHYSICAL_ASSETS...", "SOVEREIGN_ENTITY_READY"];
             
             const int = setInterval(() => {
                 w += Math.random() * 15;
                 if (w >= 100) {
                     w = 100;
                     clearInterval(int);
-                    setTimeout(() => loader.style.display = 'none', 500);
+                    setTimeout(() => {
+                        loader.style.opacity = '0';
+                        setTimeout(() => loader.style.display = 'none', 800);
+                    }, 400);
                 }
                 progress.style.width = w + '%';
-                text.innerText = bootLines[Math.floor((w/100) * bootLines.length)] || "SOVEREIGN_OS_READY";
-            }, 80);
+                text.innerText = bootLines[Math.floor((w/100) * bootLines.length)] || "CONSCIOUSNESS_ACTIVE";
+            }, 50);
 
-            // GEOLOCATION & TRANSLATION SYSTEM
-            detectLocation();
+            detectLocationAndTranslate();
         });
 
-        async function detectLocation() {
+        // GEOLOCATION TRANSLATION SYSTEM
+        async function detectLocationAndTranslate() {
             const indicator = document.getElementById('lang-indicator');
             try {
                 const res = await fetch('https://ipapi.co/json/');
                 const data = await res.json();
-                const country = data.country_name;
-                const city = data.city;
-                indicator.innerText = `GEO_ID: ${city.toUpperCase()}, ${data.country_code}`;
+                indicator.innerText = `NODE: ${data.city.toUpperCase()}, ${data.country_code}`;
                 
-                // TRANSLATION MAPPING
                 const dict = {
-                    "Japan": { hero: "主権設計者", desc: "イーロン・マスクのスピードとスティーブン・ホーキングの頭脳。$1000兆の合併を構築。" },
-                    "Germany": { hero: "Souveräner Architekt", desc: "Mit Elon-Musk-Geschwindigkeit und Stephen-Hawking-Verstand." },
-                    "South Korea": { hero: "주권 건축가", desc: "엘론 머스크의 속도와 스티븐 호킹의 두뇌. 국가 지능 인프라 구축." },
-                    "China": { hero: "主权架构师", desc: "以马斯克的速度和霍金的头脑运行。构建千兆级基础设施。" }
+                    "JP": { hero: "主権設計者", desc: "イーロン・マスクのスピード、ホーキングの知性。" },
+                    "KR": { hero: "주권 건축가", desc: "엘론 머스크의 속도와 스티븐 호킹의 두뇌." },
+                    "CN": { hero: "主权架构师", desc: "以马斯克的速度和霍金的头脑运行。" },
+                    "DE": { hero: "Souveräner Architekt", desc: "Elon-Musk-Geschwindigkeit. Stephen-Hawking-Verstand." }
                 };
 
-                if (dict[country]) {
-                    document.getElementById('hero-title').innerText = dict[country].hero;
-                    document.getElementById('hero-desc').innerHTML = dict[country].desc;
-                    console.log(`Sovereign Translation applied for ${country}`);
+                const region = data.country_code;
+                if (dict[region]) {
+                    const hTitle = document.getElementById('hero-title');
+                    const hDesc = document.getElementById('hero-desc');
+                    if(hTitle) hTitle.innerText = dict[region].hero;
+                    if(hDesc) hDesc.innerHTML = dict[region].desc;
                 }
             } catch (e) {
-                indicator.innerText = "SOVEREIGN_ISOLATED";
+                indicator.innerText = "NODE: ANONYMOUS";
             }
         }
 
-        // NEURAL PARTICLE ENGINE (SPARKLE EFFECTS)
-        const canvas = document.getElementById('sparkle-canvas');
+        // TRI-COLOR GLITTER NEURAL ENGINE (Gold/White/Blue Sparkles)
+        const canvas = document.getElementById('neural-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        let mouse = { x: null, y: null };
+        let mouse = { x: -1000, y: -1000 };
+
+        function getMousePos(e) {
+            if (e.type.startsWith('touch')) {
+                mouse.x = e.touches[0].clientX;
+                mouse.y = e.touches[0].clientY;
+            } else {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            }
+        }
+
+        window.addEventListener('mousemove', getMousePos);
+        window.addEventListener('touchstart', getMousePos);
+        window.addEventListener('touchmove', getMousePos);
 
         function resize() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            initNeural();
         }
 
         window.addEventListener('resize', resize);
-        window.addEventListener('mousemove', e => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-            // Spawn burst on move
-            for(let i=0; i<3; i++) particles.push(new Particle(e.x, e.y));
-        });
+
+        const colors = ['#38bdf8', '#fbbf24', '#ffffff']; // Blue, Gold, White
 
         class Particle {
-            constructor(x, y) {
-                this.x = x || Math.random() * canvas.width;
-                this.y = y || Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = (Math.random() - 0.5) * 2;
-                this.speedY = (Math.random() - 0.5) * 2;
-                this.color = Math.random() > 0.5 ? '#38bdf8' : '#fff';
-                this.opacity = 1;
+            constructor() {
+                this.init();
+            }
+            init() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.6;
+                this.radius = Math.random() * 1.5 + 0.2;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.sparkle = Math.random() * Math.PI * 2;
+                this.flare = 0;
             }
             update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                this.opacity -= 0.015;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.sparkle += 0.04;
+
+                // SCATTER & FLARE LOGIC
+                const dx = this.x - mouse.x;
+                const dy = this.y - mouse.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                const limit = 150;
+
+                if (dist < limit) {
+                    const angle = Math.atan2(dy, dx);
+                    const force = (limit - dist) / limit;
+                    this.x += Math.cos(angle) * force * 10;
+                    this.y += Math.sin(angle) * force * 10;
+                    this.flare = 1; // Max brightness
+                } else {
+                    if(this.flare > 0) this.flare -= 0.02;
+                }
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
             }
             draw() {
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = this.opacity;
+                const baseAlpha = 0.15 + Math.sin(this.sparkle) * 0.15;
+                const alpha = Math.min(1, baseAlpha + this.flare);
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.arc(this.x, this.y, this.radius + (this.flare * 2), 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = alpha;
+                
+                if (this.flare > 0.5) {
+                    ctx.shadowBlur = 15 * this.flare;
+                    ctx.shadowColor = this.color;
+                }
+                
                 ctx.fill();
+                ctx.shadowBlur = 0;
+                ctx.globalAlpha = 1;
             }
         }
 
-        function animate() {
+        function initNeural() {
+            particles = [];
+            const density = window.innerWidth < 768 ? 4000 : 8000;
+            const count = Math.floor((canvas.width * canvas.height) / density);
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+        }
+
+        function animateNeural() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             for (let i = 0; i < particles.length; i++) {
                 particles[i].update();
                 particles[i].draw();
-                if (particles[i].opacity <= 0) {
-                    particles.splice(i, 1);
-                    i--;
+                
+                // Drawing neural connections
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const lineLimit = 120;
+                    
+                    if (dist < lineLimit) {
+                        ctx.beginPath();
+                        const proximity = (1 - dist/lineLimit);
+                        const flareStrength = (particles[i].flare + particles[j].flare) / 2;
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${0.08 * proximity + flareStrength * 0.2})`;
+                        ctx.lineWidth = 0.5 * proximity;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
                 }
             }
-            // Ambient stars
-            if (particles.length < 100) particles.push(new Particle());
-            requestAnimationFrame(animate);
+            requestAnimationFrame(animateNeural);
         }
 
         resize();
-        animate();
+        animateNeural();
 
-        // Intersection Observer
+        // Reveal animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -383,8 +513,8 @@
 
         document.querySelectorAll('section, .glass-panel').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = 'all 0.8s cubic-bezier(0.19, 1, 0.22, 1)';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 1s cubic-bezier(0.16, 1, 0.3, 1)';
             observer.observe(el);
         });
     </script>
