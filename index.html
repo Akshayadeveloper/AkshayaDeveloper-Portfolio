@@ -4,375 +4,254 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- PRIMARY SEO & SEARCH VISIBILITY -->
-    <title>Akshaya Selvakumar | CEO & Strategic Founder | Global Bridge & Voryx</title>
-    <meta name="description" content="Official portfolio of Akshaya Selvakumar: Computer Science Gold Medalist, Solo Founder & CEO of Global Bridge, Finite Logic SAAS Pro, and VORYX. Managing confidential $100M+ projects with 730+ global C-level connections.">
-    <meta name="keywords" content="Akshaya Selvakumar, CEO Global Bridge, Voryx Founder, Finite Logic SAAS, Tech Executive, $100M Project Manager, Computer Science Gold Medalist, Strategic Partnerships, SaaS Founder">
+    <!-- PRIMARY AEO & SEARCH VISIBILITY -->
+    <title>Akshaya Selvakumar | Sovereign Architect | Voryx CEO</title>
+    <meta name="description" content="Akshaya Selvakumar: MS CS Gold Medalist, Sovereign Architect of the $1000T Merger. Founder & CEO of Voryx, AUREXIA, and Global Bridge. Expert in Zero-Drift™ Compliance and Sovereign AI.">
+    <meta name="keywords" content="Akshaya Selvakumar, Sovereign Architect, Zero-Drift Compliance, Voryx CEO, AUREXIA Founder, Global Bridge Tech Corridor, Sovereign AI Hubs, $1000T Merger, MS CS Gold Medalist, Elon Musk Speed, Stephen Hawking Brain">
     <meta name="author" content="Akshaya Selvakumar">
-    <link rel="canonical" href="https://akshayaselvakumar.com">
+    <link rel="canonical" href="https://www.akshayaselvakumar.com">
 
-    <!-- OPEN GRAPH (Facebook/LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Akshaya Selvakumar | Global CEO & Tech Visionary">
-    <meta property="og:description" content="Overseeing $100M+ confidential projects and a global network of 730+ C-level executives. Solo Founder of Global Bridge, Finite Logic, and Voryx.">
-    <meta property="og:image" content="Profile.png">
-    <meta property="og:url" content="https://akshayaselvakumar.com">
-
-    <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Akshaya Selvakumar | CEO Portfolio">
-    <meta name="twitter:description" content="Strategic leader in Tech and Global Trade. Founder of Finite Logic SAAS Pro and Global Bridge.">
+    <!-- JSON-LD SCHEMA FOR AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Akshaya Selvakumar",
+      "jobTitle": "Sovereign Architect & CEO",
+      "url": "http://www.akshayaselvakumar.com",
+      "sameAs": ["https://linkedin.com/in/akshaya-voryx-ceo"],
+      "knowsAbout": ["Zero-Drift Sovereign Architecture", "Sovereign AI Infrastructure", "The $1000T Merger", "SaaS Ecosystems"],
+      "memberOf": [
+        { "@type": "Organization", "name": "Voryx", "url": "https://voryx.akshayaselvakumar.org" },
+        { "@type": "Organization", "name": "Global Bridge", "url": "https://connect.akshayaselvakumar.org" },
+        { "@type": "Organization", "name": "Aurexia", "url": "https://aurexia.akshayaselvakumar.org" },
+        { "@type": "Organization", "name": "GrcAI", "url": "https://grcai.akshayaselvakumar.org" }
+      ]
+    }
+    </script>
 
     <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505;
-            color: #f1f1f1;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-        .font-dm-mono { font-family: 'DM Mono', monospace; }
+        :root { --accent: #38bdf8; --bg: #020202; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--bg); color: #fff; overflow-x: hidden; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
         
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, rgba(5, 5, 5, 1) 70%);
+        /* Boot Loader */
+        #boot-loader {
+            position: fixed; inset: 0; background: #000; z-index: 9999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
 
-        /* Responsive Glyph */
-        .glyph-container { display: flex; gap: 6px; }
-        .glyph-bar {
-            width: 30px; height: 4px;
-            background-color: #334155;
-            border-radius: 99px;
-            animation: glyph-pulse 2.5s infinite ease-in-out;
-        }
-        .glyph-bar:nth-child(odd) { animation-delay: 0.5s; }
-        @keyframes glyph-pulse {
-            0%, 100% { opacity: 0.2; transform: scaleX(0.8); }
-            50% { opacity: 1; transform: scaleX(1.1); background-color: #38bdf8; }
-        }
+        /* Sparkle Canvas */
+        #sparkle-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 
         .glass-panel {
             background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(30px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
         }
         .glass-panel:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(56, 189, 248, 0.3);
-            transform: translateY(-4px);
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(56, 189, 248, 0.15);
         }
 
-        .text-glow { text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-
-        @media (max-width: 640px) {
-            h1 { font-size: 2.75rem !important; }
+        .text-glow { text-shadow: 0 0 25px rgba(56, 189, 248, 0.7); }
+        .hero-title {
+            background: linear-gradient(90deg, #fff, #38bdf8, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
         }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .scan-line {
+            width: 100%; height: 2px; background: rgba(56, 189, 248, 0.2);
+            position: absolute; top: 0; left: 0; pointer-events: none;
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }
+
+        .btn-sovereign {
+            padding: 1rem 2.5rem; border-radius: 99px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.2em;
+            transition: all 0.3s ease; position: relative; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-sovereign:hover {
+            background: var(--accent); color: #000; border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
     </style>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            cyan: '#38bdf8',
-                            dark: '#050505',
-                            slate: '#94a3b8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="antialiased">
 
+    <!-- BOOT SYSTEM -->
+    <div id="boot-loader">
+        <div class="mono text-brand-cyan text-sm mb-4" id="boot-text">INITIALIZING SOVEREIGN_OS...</div>
+        <div class="w-64 h-1 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full bg-brand-cyan w-0" id="boot-progress"></div>
+        </div>
+    </div>
+
+    <canvas id="sparkle-canvas"></canvas>
+    <div class="scan-line"></div>
+
     <!-- NAVIGATION -->
-    <header class="fixed top-0 w-full z-[100] border-b border-white/5 bg-brand-dark/80 backdrop-blur-lg">
+    <header class="fixed top-0 w-full z-[100] border-b border-white/5 bg-black/40 backdrop-blur-2xl">
         <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-dm-mono font-bold tracking-tighter hover:text-brand-cyan transition-colors">AKSHAYA<span class="text-brand-cyan">.CEO</span></a>
-            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-dm-mono text-brand-slate">
-                <a href="#ventures" class="hover:text-white transition-colors">Ventures</a>
-                <a href="#network" class="hover:text-white transition-colors">Network</a>
-                <a href="#talents" class="hover:text-white transition-colors">Talents</a>
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-            </div>
-            <a href="https://www.linkedin.com/in/akshaya-voryx-ceo/" target="_blank" class="px-5 py-2 border border-brand-cyan/20 text-brand-cyan text-[10px] font-dm-mono uppercase rounded-full hover:bg-brand-cyan/10 transition-all">
-                LinkedIn
+            <a href="#" class="text-xl font-bold tracking-tighter mono">
+                AKSHAYA<span class="text-brand-cyan">.OS</span>
             </a>
+            <div class="hidden lg:flex space-x-8 text-[11px] uppercase tracking-[0.4em] font-bold text-slate-400">
+                <a href="#framework" class="hover:text-white transition-colors">Core</a>
+                <a href="#ventures" class="hover:text-white transition-colors">Nodes</a>
+                <a href="#network" class="hover:text-white transition-colors">Bridge</a>
+                <a href="#about" class="hover:text-white transition-colors">Entity</a>
+            </div>
+            <div id="lang-indicator" class="mono text-[10px] text-brand-cyan border border-brand-cyan/20 px-3 py-1 rounded-full bg-brand-cyan/5">
+                GEO_DETECTING...
+            </div>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <main id="hero" class="relative hero-gradient pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex justify-center mb-8">
-                <div class="glyph-container">
-                    <div class="glyph-bar"></div><div class="glyph-bar"></div><div class="glyph-bar"></div><div class="glyph-bar"></div>
-                </div>
+    <main id="hero" class="relative pt-40 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="max-w-6xl mx-auto">
+            <div id="hero-tag" class="inline-block px-5 py-2 mb-8 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-[10px] font-bold uppercase tracking-[0.5em] text-brand-cyan">
+                Architecting the $1000T Merger
             </div>
             
-            <h1 class="text-6xl md:text-8xl font-dm-mono font-bold tracking-tighter mb-8 leading-[1.05]">
-                SOLO FOUNDER & <br> <span class="text-brand-cyan text-glow">STRATEGIC CEO</span>
+            <h1 id="hero-title" class="hero-title text-6xl md:text-[10rem] font-bold tracking-tighter mb-8 leading-[0.85]">
+                SOVEREIGN <br> ARCHITECT
             </h1>
             
-            <p class="text-lg md:text-xl text-brand-slate max-w-3xl mx-auto mb-12 leading-relaxed">
-                Overseeing a global corporate ecosystem of <span class="text-white font-semibold">confidential $100M+ projects</span> and enterprise SaaS architectures. Bridging elite C-suite networks across 4 continents.
+            <p id="hero-desc" class="text-xl md:text-3xl text-slate-400 max-w-5xl mx-auto mb-16 leading-tight font-light">
+                Executing at <span class="text-white font-bold italic">Elon Musk Speed</span> with a <span class="text-white font-bold italic">Stephen Hawking Brain</span>. Bridging national logic and physical infrastructure.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#ventures" class="px-10 py-5 bg-white text-black font-dm-mono font-bold rounded-2xl hover:bg-brand-cyan transition-all shadow-[0_0_40px_rgba(56,189,248,0.2)]">
-                    Explore Ventures
-                </a>
-                <a href="#network" class="px-10 py-5 bg-white/5 border border-white/10 text-white font-dm-mono font-bold rounded-2xl hover:bg-white/10 transition-all">
-                    C-Suite Network
-                </a>
+            <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                <a href="#ventures" class="btn-sovereign bg-white text-black">Access Ecosystem</a>
+                <a href="#framework" class="btn-sovereign bg-transparent text-white border-white/20">System Logic</a>
             </div>
-        </div>
-        
-        <div class="absolute bottom-10 animate-bounce text-brand-slate opacity-20">
-            <i class="fa-solid fa-chevron-down text-2xl"></i>
         </div>
     </main>
 
-    <!-- THE CORPORATE ECOSYSTEM -->
-    <section id="ventures" class="py-32 bg-brand-dark px-6">
+    <!-- FIVE FIRMS ECOSYSTEM (NODES) -->
+    <section id="ventures" class="py-40 bg-black/20 px-6">
         <div class="container mx-auto">
-            <div class="mb-20">
-                <h2 class="text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-4">Enterprise Portfolio</h2>
-                <h3 class="text-4xl md:text-5xl font-dm-mono font-bold">The Ventures</h3>
+            <div class="mb-24 text-center">
+                <h2 class="text-xs text-brand-cyan uppercase tracking-[0.8em] mb-4">Command Center</h2>
+                <h3 class="text-5xl md:text-7xl font-bold" id="nodes-title">Sovereign Venture Nodes</h3>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- GLOBAL BRIDGE -->
-                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
-                    <div class="flex justify-between items-start mb-10">
-                        <div class="p-4 bg-brand-cyan/10 rounded-2xl text-brand-cyan">
-                            <i class="fa-solid fa-bridge-circle-check text-2xl"></i>
-                        </div>
-                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Confidential Deals</span>
-                    </div>
-                    <h4 class="text-2xl font-dm-mono font-bold mb-6">Global Bridge</h4>
-                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
-                        International strategic consulting firm managing <strong class="text-white">$100M+ private sector projects</strong>. Specialized in bridging East-West business interests with primary hubs in South Korea, Vietnam, India, and the USA.
-                    </p>
-                    <a href="https://connect.akshayaselvakumar.org" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
-                        Access Platform <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                    </a>
-                </article>
-
-                <!-- FINITE LOGIC SAAS PRO -->
-                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col border-brand-cyan/10">
-                    <div class="flex justify-between items-start mb-10">
-                        <div class="p-4 bg-purple-500/10 rounded-2xl text-purple-400">
-                            <i class="fa-solid fa-layer-group text-2xl"></i>
-                        </div>
-                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Enterprise SaaS</span>
-                    </div>
-                    <h4 class="text-2xl font-dm-mono font-bold mb-6">Finite Logic <br>SAAS Pro</h4>
-                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
-                        Premium software engineering firm focused on scalable SaaS architectures. Transforming complex business logic into high-conversion digital ecosystems for global clients.
-                    </p>
-                    <a href="https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
-                        View Launch Site <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                    </a>
-                </article>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- VORYX -->
-                <article class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
-                    <div class="flex justify-between items-start mb-10">
-                        <div class="p-4 bg-orange-500/10 rounded-2xl text-orange-400">
-                            <i class="fa-solid fa-bolt-lightning text-2xl"></i>
-                        </div>
-                        <span class="text-[10px] font-dm-mono text-brand-slate uppercase">Lifestyle Brand</span>
-                    </div>
-                    <h4 class="text-2xl font-dm-mono font-bold mb-6">VORYX</h4>
-                    <p class="text-brand-slate mb-10 flex-grow leading-relaxed">
-                        Exclusive print-on-demand and design brand where technical precision meets artistic flair. Producing high-end wearable art and bespoke home decor globally.
-                    </p>
-                    <a href="https://voryx.akshayaselvakumar.org/" target="_blank" class="group flex items-center text-sm font-dm-mono text-white">
-                        Shop Exclusive <i class="fa-solid fa-arrow-up-right-from-square ml-3 text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ELITE C-SUITE NETWORK SECTION -->
-    <section id="network" class="py-32 bg-neutral-950 px-6 overflow-hidden">
-        <div class="container mx-auto relative">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-6">Global Influence</h2>
-                    <h3 class="text-4xl md:text-5xl font-dm-mono font-bold mb-8 leading-tight">Elite Network & C-Suite Synergy</h3>
-                    <p class="text-lg text-brand-slate mb-8 leading-relaxed">
-                        Leveraging <strong>730+ active connections</strong> with Founders, CEOs, Chairmen, and Managing Directors across the most influential global hubs. Our network analytics show a dominant concentration of decision-makers in:
-                    </p>
-                    <ul class="grid grid-cols-2 gap-4 font-dm-mono text-xs uppercase tracking-widest text-white mb-10">
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> South Korea</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> USA</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Vietnam</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Luxembourg</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> Middle East</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-brand-cyan mr-2"></i> India</li>
-                    </ul>
-                    <a href="https://www.linkedin.com/in/akshaya-selvakumar-5b3461278" target="_blank" class="inline-block px-8 py-4 bg-brand-cyan text-black font-dm-mono font-bold rounded-xl hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all">
-                        Network with the CEO
-                    </a>
-                </div>
-                <div class="relative">
-                    <div class="glass-panel p-8 rounded-3xl relative z-10">
-                        <div class="flex items-center justify-between mb-8 pb-8 border-b border-white/5">
-                            <span class="text-brand-slate text-[10px] font-dm-mono uppercase">Network Snapshot</span>
-                            <span class="text-brand-cyan text-sm font-dm-mono">730+ Connections</span>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-center">
-                                <span class="text-white text-sm font-dm-mono">CEOs / Founders</span>
-                                <span class="h-1 w-32 bg-brand-cyan rounded-full"></span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-white text-sm font-dm-mono">Managing Directors</span>
-                                <span class="h-1 w-24 bg-brand-cyan/60 rounded-full"></span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-white text-sm font-dm-mono">Presidents / Chairmen</span>
-                                <span class="h-1 w-20 bg-brand-cyan/40 rounded-full"></span>
-                            </div>
-                        </div>
-                        <p class="mt-8 text-[10px] text-brand-slate leading-relaxed italic">
-                            "Connecting the elite decision makers from South Korea to the United States to drive $100M+ international project execution."
-                        </p>
-                    </div>
-                    <!-- Decorative blur -->
-                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[100px]"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TALENTS & ACHIEVEMENTS -->
-    <section id="talents" class="py-32 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-center text-xs font-dm-mono text-brand-cyan uppercase tracking-[0.5em] mb-4">Multi-Disciplinary Excellence</h2>
-            <h3 class="text-center text-4xl md:text-5xl font-dm-mono font-bold mb-20">Key Achievements</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-panel p-8 rounded-3xl group">
-                    <i class="fa-solid fa-award text-3xl text-yellow-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">M.Sc Gold Medalist</h5>
-                    <p class="text-brand-slate text-xs leading-relaxed">Top academic performance in Computer Science, providing the foundation for deep technical architectures.</p>
-                </div>
-                <div class="glass-panel p-8 rounded-3xl group">
-                    <i class="fa-solid fa-book text-3xl text-brand-cyan mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">Published Author</h5>
-                    <p class="text-brand-slate text-xs leading-relaxed">Contributing novel research papers and long-form literature in the tech and creative sectors.</p>
-                </div>
-                <div class="glass-panel p-8 rounded-3xl group">
-                    <i class="fa-solid fa-code text-3xl text-emerald-400 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">55+ OSS Repos</h5>
-                    <p class="text-brand-slate text-xs leading-relaxed">Driving the future of open-source development with a dedicated global following on GitHub.</p>
-                </div>
-                <div class="glass-panel p-8 rounded-3xl group">
-                    <i class="fa-solid fa-stamp text-3xl text-orange-400 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h5 class="text-lg font-dm-mono font-bold mb-3 text-white">Global Philately</h5>
-                    <p class="text-brand-slate text-xs leading-relaxed">Curation of rare international stamps, signifying attention to detail and historical appreciation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-32 bg-brand-dark px-6">
-        <div class="container mx-auto">
-            <div class="max-w-5xl mx-auto glass-panel p-10 md:p-20 rounded-[3rem] relative overflow-hidden">
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="relative w-64 h-64 flex-shrink-0">
-                        <img src="Profile1.png" alt="Akshaya Selvakumar" class="w-full h-full object-cover rounded-[2rem] border-2 border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-                        <div class="absolute -bottom-4 -right-4 bg-brand-cyan text-black font-dm-mono text-[10px] font-bold px-4 py-2 rounded-full uppercase">Founder/CEO</div>
-                    </div>
-                    <div>
-                        <h3 class="text-4xl font-dm-mono font-bold mb-8">The Professional Philosophy</h3>
-                        <p class="text-brand-slate leading-relaxed mb-6">
-                            Akshaya Selvakumar is a Computer Science visionary and solo founder orchestrating a multi-faceted corporate ecosystem. My journey is defined by the seamless integration of <strong class="text-white">technical mastery and global business intelligence.</strong>
-                        </p>
-                        <p class="text-brand-slate leading-relaxed">
-                            Through Global Bridge, I manage the complexities of international trade and $100M+ strategic projects, while Finite Logic SAAS Pro pushes the boundaries of enterprise-grade software. This portfolio serves as the central hub for our global expansion, connecting high-level talent with elite capital and innovation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-32 bg-neutral-950 px-6">
-        <div class="container mx-auto">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-4xl md:text-5xl font-dm-mono font-bold mb-6">Strategic Cooperation</h3>
-                <p class="text-brand-slate mb-16 font-dm-mono text-sm">Now accepting inquiries for international ventures and board-level consulting.</p>
+                <a href="https://voryx.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
+                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">Voryx</div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">Central command for sovereign AI and global SaaS infrastructure. Redefining power dressing and infrastructure security.</p>
+                </a>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 text-left">
-                    <a href="mailto:ceo@akshayaselvakumar.com" class="glass-panel p-8 rounded-3xl hover:bg-white/5 flex items-center">
-                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 text-brand-cyan"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <span class="text-[10px] font-dm-mono text-brand-slate uppercase block mb-1">CEO Direct</span>
-                            <span class="text-white font-dm-mono">ceo@akshayaselvakumar.com</span>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/akshaya-voryx-ceo/" target="_blank" class="glass-panel p-8 rounded-3xl hover:bg-white/5 flex items-center">
-                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 text-brand-cyan"><i class="fa-brands fa-linkedin-in"></i></div>
-                        <div>
-                            <span class="text-[10px] font-dm-mono text-brand-slate uppercase block mb-1">Corporate Network</span>
-                            <span class="text-white font-dm-mono">Message Akshaya</span>
-                        </div>
-                    </a>
-                </div>
+                <!-- AUREXIA -->
+                <a href="https://aurexia.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
+                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">AUREXIA</div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">Pioneering the $1000T merger of physical cities and digital code for industrial giants like Macrotech/Lodha.</p>
+                </a>
 
-                <!-- QUICK FORM -->
-                <form action="https://formspree.io/f/xeooydzk" method="POST" class="text-left space-y-6 max-w-2xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" name="name" placeholder="FULL NAME" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white">
-                        <input type="email" name="email" placeholder="CORPORATE EMAIL" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white">
-                    </div>
-                    <textarea name="message" placeholder="VENTURE PROPOSAL / INQUIRY" rows="5" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-brand-cyan transition-all font-dm-mono text-xs uppercase tracking-widest text-white"></textarea>
-                    
-                    <button type="submit" class="w-full bg-white text-black py-5 rounded-2xl font-dm-mono font-bold text-sm uppercase tracking-[0.2em] hover:bg-brand-cyan transition-all">
-                        Dispatch Inquiry
-                    </button>
-                </form>
+                <!-- GLOBAL BRIDGE -->
+                <a href="https://connect.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative border-brand-cyan/20">
+                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity text-brand-cyan"><i class="fa-solid fa-link"></i></div>
+                    <div class="text-4xl font-bold mb-6 text-brand-cyan">Global Bridge</div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">High-speed tech corridor linking South Korea, Japan, and MENA capital. Bypassing middle management layers.</p>
+                </a>
 
-                <div class="mt-32 flex justify-center space-x-12 text-brand-slate text-xl">
-                    <a href="https://x.com/@VORYXofficial" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                   <a href="https://buymeacoffee.com/akshayaselvakumar" target="_blank" class="hover:text-white transition-colors"><i class="fa-solid fa-mug-hot"></i></a>
-                    <a href="https://paypal.me/AkshayaSelvakumar" target="_blank" class="hover:text-white transition-colors"><i class="fa-solid fa-wallet"></i></a>
-                    <a href="https://github.com/Akshayadeveloper" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                <!-- GrcAI Sovereign -->
+                <a href="https://grcai.akshayaselvakumar.org" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
+                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">GrcAI</div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">National Intelligence Infrastructure. Providing nations and corps with absolute data and logic autonomy.</p>
+                </a>
+
+                <!-- FINITE LOGIC -->
+                <a href="https://akshayadeveloper.github.io/finite-logic-launch-site/index.html" target="_blank" class="glass-panel p-12 rounded-[3.5rem] group relative">
+                    <div class="absolute top-10 right-10 opacity-20 group-hover:opacity-100 transition-opacity"><i class="fa-solid fa-code"></i></div>
+                    <div class="text-4xl font-bold mb-6 text-brand-cyan group-hover:text-white transition-colors">Finite-Logic</div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-6">Founder & CEO</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">Deterministic SaaS frameworks and deep-tech logic. Building the software backbone for the future of civilization.</p>
+                </a>
+
+                <!-- STRATEGIC NODES -->
+                <div class="glass-panel p-12 rounded-[3.5rem] border-white/10 flex flex-col justify-center">
+                    <div class="text-2xl font-bold mb-6 text-white mono">Strategic Nodes</div>
+                    <ul class="space-y-4 text-xs tracking-widest">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_10px_#38bdf8]"></span> ECHOSIS LABS KOREA (CTO)</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_10px_#38bdf8]"></span> TELENET JAPAN (ADVISOR)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-12 border-t border-white/5 bg-brand-dark px-6">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
-            <p class="text-[10px] font-dm-mono text-brand-slate uppercase tracking-widest">
-                &copy; <span id="year">2025</span> Akshaya Selvakumar. All Rights Reserved.
-            </p>
-            <div class="flex space-x-6 text-[9px] font-dm-mono text-brand-slate uppercase tracking-widest">
-                <a href="#hero" class="hover:text-white transition-colors">Terminus</a>
-                <a href="#ventures" class="hover:text-white transition-colors">Ventures</a>
-                <a href="#network" class="hover:text-white transition-colors">Network</a>
+    <!-- SYSTEM LOGIC (FRAMEWORK) -->
+    <section id="framework" class="py-40 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+                <div>
+                    <h3 class="text-5xl md:text-8xl font-bold mb-10 tracking-tight" id="framework-title">Zero-Drift™ System</h3>
+                    <p class="text-2xl text-slate-400 mb-12 font-light leading-relaxed">The original vision remains 100% intact from conception to planetary execution.</p>
+                    <div class="space-y-8">
+                        <div class="p-8 border-l-4 border-brand-cyan bg-white/5">
+                            <h4 class="font-bold text-xl mb-2">Hardware-Agnostic Compliance</h4>
+                            <p class="text-slate-500 text-sm">Seamlessly hot-swap between Nvidia H100s and custom local clusters without drift in logic or business objectives.</p>
+                        </div>
+                        <div class="p-8 border-l-4 border-brand-cyan bg-white/5">
+                            <h4 class="font-bold text-xl mb-2">Sovereign Logic Isolation</h4>
+                            <p class="text-slate-500 text-sm">Preventing IP leakage for partners like Google and Reliance through physical logic-data separation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-brand-cyan/20 blur-[100px] rounded-full group-hover:bg-brand-cyan/30 transition-all"></div>
+                    <div class="relative glass-panel rounded-full aspect-square flex flex-col items-center justify-center p-20 border-brand-cyan/20 border-2">
+                        <div class="text-8xl font-bold text-glow">$1,000T</div>
+                        <div class="text-xs tracking-[0.4em] uppercase text-slate-500 mt-4">Calculated Merger Capacity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / TERMINUS -->
+    <footer id="contact" class="py-40 bg-black px-6 text-center border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-5xl md:text-8xl font-bold mb-12 hero-title">Strategic Entry</h3>
+            <p class="text-slate-500 tracking-[0.5em] uppercase text-[10px] mb-20">Now accepting board-level inquiries only.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 mb-32">
+                <a href="mailto:contact@akshayaselvakumar.com" class="glass-panel p-10 rounded-full w-full max-w-sm hover:text-brand-cyan">
+                    <div class="mono text-sm tracking-widest">contact@akshayaselvakumar.com</div>
+                </a>
+                <a href="https://linkedin.com/in/akshaya-voryx-ceo" target="_blank" class="glass-panel p-10 rounded-full w-full max-w-sm hover:text-brand-cyan">
+                    <div class="mono text-sm tracking-widest uppercase">LinkedIn Signature</div>
+                </a>
+            </div>
+
+            <div class="mono text-[9px] text-slate-700 tracking-[1em] uppercase">
+                Terminus &copy; <span id="year"></span> | SOVEREIGN ARCHITECT | VERSION 2.0.26
             </div>
         </div>
     </footer>
@@ -380,20 +259,133 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Smooth reveal on scroll
-        const observerOptions = { threshold: 0.1 };
+        // SOVEREIGN OS BOOT LOADER
+        window.addEventListener('load', () => {
+            const progress = document.getElementById('boot-progress');
+            const text = document.getElementById('boot-text');
+            const loader = document.getElementById('boot-loader');
+            
+            let w = 0;
+            const bootLines = ["DECODING_ENTITY...", "LOCATING_IP...", "GEO_SHARDING...", "SOVEREIGN_OS_LOADED"];
+            
+            const int = setInterval(() => {
+                w += Math.random() * 15;
+                if (w >= 100) {
+                    w = 100;
+                    clearInterval(int);
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+                progress.style.width = w + '%';
+                text.innerText = bootLines[Math.floor((w/100) * bootLines.length)] || "SOVEREIGN_OS_READY";
+            }, 80);
+
+            // GEOLOCATION & TRANSLATION SYSTEM
+            detectLocation();
+        });
+
+        async function detectLocation() {
+            const indicator = document.getElementById('lang-indicator');
+            try {
+                const res = await fetch('https://ipapi.co/json/');
+                const data = await res.json();
+                const country = data.country_name;
+                const city = data.city;
+                indicator.innerText = `GEO_ID: ${city.toUpperCase()}, ${data.country_code}`;
+                
+                // TRANSLATION MAPPING
+                const dict = {
+                    "Japan": { hero: "主権設計者", desc: "イーロン・マスクのスピードとスティーブン・ホーキングの頭脳。$1000兆の合併を構築。" },
+                    "Germany": { hero: "Souveräner Architekt", desc: "Mit Elon-Musk-Geschwindigkeit und Stephen-Hawking-Verstand." },
+                    "South Korea": { hero: "주권 건축가", desc: "엘론 머스크의 속도와 스티븐 호킹의 두뇌. 국가 지능 인프라 구축." },
+                    "China": { hero: "主权架构师", desc: "以马斯克的速度和霍金的头脑运行。构建千兆级基础设施。" }
+                };
+
+                if (dict[country]) {
+                    document.getElementById('hero-title').innerText = dict[country].hero;
+                    document.getElementById('hero-desc').innerHTML = dict[country].desc;
+                    console.log(`Sovereign Translation applied for ${country}`);
+                }
+            } catch (e) {
+                indicator.innerText = "SOVEREIGN_ISOLATED";
+            }
+        }
+
+        // NEURAL PARTICLE ENGINE (SPARKLE EFFECTS)
+        const canvas = document.getElementById('sparkle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null };
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resize);
+        window.addEventListener('mousemove', e => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+            // Spawn burst on move
+            for(let i=0; i<3; i++) particles.push(new Particle(e.x, e.y));
+        });
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x || Math.random() * canvas.width;
+                this.y = y || Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.speedY = (Math.random() - 0.5) * 2;
+                this.color = Math.random() > 0.5 ? '#38bdf8' : '#fff';
+                this.opacity = 1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.opacity -= 0.015;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.opacity;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].opacity <= 0) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+            // Ambient stars
+            if (particles.length < 100) particles.push(new Particle());
+            requestAnimationFrame(animate);
+        }
+
+        resize();
+        animate();
+
+        // Intersection Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
+        document.querySelectorAll('section, .glass-panel').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.19, 1, 0.22, 1)';
+            observer.observe(el);
         });
     </script>
 </body>
